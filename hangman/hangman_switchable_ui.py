@@ -26,24 +26,7 @@ class Hangman_UI:
 
 class Cmdline_UI(Hangman_UI):
     def __init__(self):
-        def getChar():
-            if "_func" not in getChar.__dict__:         # figure out which function to use once, and store it in _func
-                try:                                    # for Windows-based systems
-                    import msvcrt                       # If successful, we are on Windows
-                    getChar._func=msvcrt.getch
-                except ImportError:                     # for POSIX-based systems (with termios & tty support)
-                    import tty, sys, termios            # raises ImportError if unsupported
-                    def _ttyRead():
-                        fd = sys.stdin.fileno()
-                        oldSettings = termios.tcgetattr(fd)
-                        try:
-                            tty.setcbreak(fd)
-                            answer = sys.stdin.read(1)
-                        finally:
-                            termios.tcsetattr(fd, termios.TCSADRAIN, oldSettings)
-                        return answer
-                    getChar._func=_ttyRead
-            return getChar._func()
+        pass    # ??
 
     def print_title(self, title):
         print(title)
@@ -60,7 +43,9 @@ class Cmdline_UI(Hangman_UI):
             print(letter, end="")
         print()
         print(board[len(missed_letters)])
-
+    def get_input(self):
+        print("Guess a letter: ")
+        return get_char()
 class Curses_UI(Hangman_UI):
     YPOS_TITLE = 0
     YPOS_LIVES = 1
@@ -68,6 +53,16 @@ class Curses_UI(Hangman_UI):
     YPOS_MISSED = 5
     YPOS_GUESSED = 6
     
+    def __enter__(self):
+        pass
+
+    def __exit__(self, type, value, traceback):
+        curses.nocbreak()
+        curses.echo()
+        curses.endwin()
+        self.stdscr.keypad(False)
+
+
     def __init__(self):
         # self.scr = scr
 
@@ -87,9 +82,9 @@ class Curses_UI(Hangman_UI):
         finally:
             # restore command line environment
             curses.nocbreak()
-            self.stdscr.keypad(False)
             curses.echo()
             curses.endwin()
+            self.stdscr.keypad(False)
 
     def print_title(self, title):
         self.stdscr.addstr(Curses_UI.YPOS_TITLE, 0, rpad(title))
@@ -155,7 +150,7 @@ class Hangman:
         return self.ui.get_input()
 
     def print_status(self):
-        self.ui.print_status(self.word, self.missed_letters, self.guessed_letters)
+        self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
         # stdscr.addstr(Curses_UI.YPOS_LIVES, 0, rpad(board[len(self.missed_letters)]))
         # # print("Word: " + self.hide_word())
         # stdscr.addstr(Curses_UI.YPOS_WORD, 0, rpad(self.hide_word()))
@@ -196,6 +191,25 @@ def rand_word():
 
 #     print("Goodbye")
 
+def get_char():
+    if "_func" not in get_char.__dict__:         # figure out which function to use once, and store it in _func
+        try:                                    # for Windows-based systems
+            import msvcrt                       # If successful, we are on Windows
+            get_char._func=msvcrt.getch
+        except ImportError:                     # for POSIX-based systems (with termios & tty support)
+            import tty, sys, termios            # raises ImportError if unsupported
+            def _ttyRead():
+                fd = sys.stdin.fileno()
+                oldSettings = termios.tcgetattr(fd)
+                try:
+                    tty.setcbreak(fd)
+                    answer = sys.stdin.read(1)
+                finally:
+                    termios.tcsetattr(fd, termios.TCSADRAIN, oldSettings)
+                return answer
+            get_char._func=_ttyRead
+    return get_char._func()
+
 if __name__ == "__main__":
     print ("Welcome to Hangman")
     default = getpass.getuser()
@@ -203,16 +217,22 @@ if __name__ == "__main__":
     if name == "":
         name = default
 
+    print("(f)ullscreen, (s)crolling, or (q)uit? ")
     while True:
-        option =  input("(f)ullscreen, (s)crolling, or (q)uit? ")
+        option = get_char()
         if option == 'f':
-            ui = Curses_UI()
+            with Curses_UI as ui:
+                # ui = Curses_UI()
+                game = Hangman(rand_word(), ui)
             break
         elif option == 's':
             ui = Cmdline_UI()
+            game = Hangman(rand_word(), ui)
             break
         elif option == 'q':
-            break
+            # break
+            import sys
+            sys.exit(0)
     
     game = Hangman(rand_word(), ui)
     
