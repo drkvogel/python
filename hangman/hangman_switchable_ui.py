@@ -43,9 +43,11 @@ class Cmdline_UI(Hangman_UI):
             print(letter, end="")
         print()
         print(board[len(missed_letters)])
+    
     def get_input(self):
         print("Guess a letter: ")
         return get_char()
+
 class Curses_UI(Hangman_UI):
     YPOS_TITLE = 0
     YPOS_LIVES = 1
@@ -53,19 +55,18 @@ class Curses_UI(Hangman_UI):
     YPOS_MISSED = 5
     YPOS_GUESSED = 6
     
-    def __enter__(self):
-        pass
+    # def __enter__(self):
+    #     # ?
+    #     pass
 
-    def __exit__(self, type, value, traceback):
-        curses.nocbreak()
-        curses.echo()
-        curses.endwin()
-        self.stdscr.keypad(False)
+    # def __exit__(self, type, value, traceback):
+    #     curses.nocbreak()
+    #     curses.echo()
+    #     curses.endwin()
+    #     self.stdscr.keypad(False)
 
 
     def __init__(self):
-        # self.scr = scr
-
         try:
             # set up curses environment
             self.stdscr = curses.initscr()
@@ -106,6 +107,11 @@ class Curses_UI(Hangman_UI):
         self.stdscr.addstr(Curses_UI.YPOS_GUESSED, 0, rpad(guessed))
         self.stdscr.refresh()
 
+    def get_input(self):
+        # print("Guess a letter: ")
+        # return get_char()
+        return self.stdscr.getch()
+
 def rpad(string, width=80):
     num = width - len(string)
     return string + ' '*num
@@ -139,7 +145,6 @@ class Hangman:
     def hide_word(self):
         rtn = ''
         for letter in self.word:
-            # print("letter: ", letter)
             if letter not in self.guessed_letters:
                 rtn += '_'
             else:
@@ -221,9 +226,10 @@ if __name__ == "__main__":
     while True:
         option = get_char()
         if option == 'f':
-            with Curses_UI as ui:
+            # with Curses_UI as ui:
                 # ui = Curses_UI()
-                game = Hangman(rand_word(), ui)
+            ui = Curses_UI()
+            game = Hangman(rand_word(), ui)
             break
         elif option == 's':
             ui = Cmdline_UI()
