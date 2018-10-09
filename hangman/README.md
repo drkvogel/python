@@ -9,6 +9,10 @@ curses ui messes up terminal regardless of finally block or with statement
 shouldn't return prompt on cmdline if guessed letter already guessed
 i18n
 use with keyword for curses ui
+cmdline: two single hearts before lose - lose() logic?
+should not accept guess if already in guessed or missed?
+    hard rules - switchable rules?
+vscode: Refactor failed. expected string or bytes-like object 
 
 ## done
 

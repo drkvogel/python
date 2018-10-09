@@ -59,21 +59,23 @@ class Cmdline_UI(Hangman_UI):
         return char
 
 class Curses_UI(Hangman_UI):
+    RULESET_EASY, RULESET_HARD = range(2)   # https://stackoverflow.com/questions/36932/how-can-i-represent-an-enum-in-python
+
     YPOS_TITLE = 0
     YPOS_LIVES = 1
     YPOS_WORD = 3
     YPOS_MISSED = 5
     YPOS_GUESSED = 6
     
-    # def __enter__(self):
-    #     # ?
-    #     pass
+    def __enter__(self):
+        # ?
+        pass
 
-    # def __exit__(self, type, value, traceback):
-    #     curses.nocbreak()
-    #     curses.echo()
-    #     curses.endwin()
-    #     self.stdscr.keypad(False)
+    def __exit__(self, type, value, traceback):
+        curses.nocbreak()
+        curses.echo()
+        curses.endwin()
+        self.stdscr.keypad(False)
 
     def __init__(self):
         try:
@@ -126,8 +128,8 @@ class Hangman:
         self.word = word
         self.missed_letters = []
         self.guessed_letters = []
-        self.ui = ui
-        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")     # todo - gets called twice??
+        self.ui = ui    # ??
+        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")
     
     def guess(self, letter):
         if letter in self.word and letter not in self.guessed_letters:
@@ -186,6 +188,8 @@ def get_char():                                 # there must(?) be a slight over
             get_char._func=_ttyRead
     return get_char._func()
 
+
+
 if __name__ == "__main__":
     print ("Welcome to Hangman")
 
@@ -198,18 +202,16 @@ if __name__ == "__main__":
     while True:
         option = get_char()
         if option == 'f':
-            # with Curses_UI as ui:
-                # ui = Curses_UI()
-            ui = Curses_UI()
+            with Curses_UI() as ui:
+                game = Hangman(rand_word(), ui)
             break
         elif option == 's':
             ui = Cmdline_UI()
+            game = Hangman(rand_word(), ui)
             break
         elif option == 'q':
             import sys
             sys.exit(0)     # what about cleaning up the ui? There is no ui if we're here
-    
-    game = Hangman(rand_word(), ui)
     
     while not game.over():
         game.print_status()
