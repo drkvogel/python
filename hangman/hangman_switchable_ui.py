@@ -27,13 +27,10 @@ class Hangman_UI:
     def print_status(self, hidden_word, missed_letters, guessed_letters):
         pass
 
-    def get_input(self):
+    def get_char(self):
         pass
 
 class Cmdline_UI(Hangman_UI):
-    def __init__(self):
-        pass    # ??
-
     def print_title(self, title):
         print(title)
 
@@ -53,7 +50,7 @@ class Cmdline_UI(Hangman_UI):
             print(letter, end="")
         print()
     
-    def get_input(self):
+    def get_char(self):
         print()
         print("Guess a letter: ", end="")
         return get_char()
@@ -113,7 +110,7 @@ class Curses_UI(Hangman_UI):
         self.stdscr.addstr(Curses_UI.YPOS_GUESSED, 0, rpad(guessed))
         self.stdscr.refresh()
 
-    def get_input(self):
+    def get_char(self):
         return self.stdscr.getch()
 
 def rpad(string, width=80):
@@ -155,8 +152,8 @@ class Hangman:
                 rtn += letter
         return rtn
 
-    def get_input(self):
-        return self.ui.get_input()
+    def get_char(self):
+        return self.ui.get_char()
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
@@ -214,10 +211,10 @@ if __name__ == "__main__":
     while not game.over():
         game.print_status()
         while True:
-            user_input = game.get_input()
-            if user_input not in [None, os.linesep]:    # don't make the ui check this - but the game maybe should
+            char = game.get_char()
+            if char not in [None, os.linesep]:    # don't make the ui check this - but the game maybe should
                 break
-        game.guess(user_input)
+        game.guess(char)
     
     print()
     print()
