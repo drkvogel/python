@@ -201,11 +201,9 @@ if __name__ == "__main__":
             # with Curses_UI as ui:
                 # ui = Curses_UI()
             ui = Curses_UI()
-            game = Hangman(rand_word(), ui)
             break
         elif option == 's':
             ui = Cmdline_UI()
-            game = Hangman(rand_word(), ui)
             break
         elif option == 'q':
             import sys
