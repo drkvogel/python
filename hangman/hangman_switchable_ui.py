@@ -41,7 +41,7 @@ class Cmdline_UI(Hangman_UI):
 
         print("Word: " + hidden_word)
 
-        print("Correct:  ", end="")
+        print("Correct:   ", end="")
         for letter in guessed_letters:
             print(letter, end="")
         print()
@@ -127,7 +127,7 @@ class Hangman:
         self.missed_letters = []
         self.guessed_letters = []
         self.ui = ui
-        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")
+        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")     # todo - gets called twice??
     
     def guess(self, letter):
         if letter in self.word and letter not in self.guessed_letters:
@@ -188,6 +188,7 @@ def get_char():                                 # there must(?) be a slight over
 
 if __name__ == "__main__":
     print ("Welcome to Hangman")
+
     default = getpass.getuser()
     name = input("Enter your name to start (default is your system username: " + default + "): ")
     if name == "":
