@@ -161,13 +161,14 @@ class Hangman:
         return rtn
 
     def get_input(self):
-        char = self.ui.get_input()
-        print("char: ", char, ", ord: ", ord(char))
-        print("os.linesep: ", os.linesep, ", ord: ", ord(os.linesep))
-        # if char not in "\n":
-        # if char not in os.linesep:
-        if char != os.linesep:
-            return char
+        return self.ui.get_input()
+        # char = self.ui.get_input()
+        # # print("char: ", char, ", ord: ", ord(char))
+        # # print("os.linesep: ", os.linesep, ", ord: ", ord(os.linesep))
+        # # if char not in "\n":
+        # # if char not in os.linesep:
+        # if char != os.linesep:
+        #     return char
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
@@ -259,10 +260,14 @@ if __name__ == "__main__":
     
     while not game.over():
         game.print_status()
-        user_input = game.get_input()
-        if user_input != None:
-            game.guess(user_input)
-
+        while True:
+            user_input = game.get_input()
+            if user_input not in [None, os.linesep]:
+                break
+        game.guess(user_input)
+    
+    print()
+    print()
     if game.won():
         print("Congratulations")
     else:
