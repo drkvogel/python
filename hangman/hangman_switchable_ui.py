@@ -262,7 +262,7 @@ if __name__ == "__main__":
         game.print_status()
         while True:
             user_input = game.get_input()
-            if user_input not in [None, os.linesep]:
+            if user_input not in [None, os.linesep]:    # don't make the ui check this
                 break
         game.guess(user_input)
     
@@ -272,8 +272,8 @@ if __name__ == "__main__":
         print("Congratulations")
     else:
         print("You lost")
+        print("The word was " + game.word)
 
-    print("The word was " + game.word)
     print("Goodbye")
 
 
