@@ -8,3 +8,5 @@ With a switchable UI - you can play from the command line, or with an `ncurses` 
 number of lives should be more when word is shorter?
 curses ui messes up terminal regardless of finally block or with statement
 game doesn't finish when you get it, now!
+shouldn't return prompt on cmdline if guessed letter already guessed
+title printed twice on cmdline

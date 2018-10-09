@@ -15,6 +15,7 @@ backtrace.hook(reverse=False, align=False, strip_path=False, enable_on_envvar_on
 
 # 8 lives in hangman? https://en.wikipedia.org/wiki/Hangman_(game)
 board = ["❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️", "❤️️️️"]
+DICTIONARY_FILE = "words_alpha.txt"
 
 class Hangman_UI:
     # how to make abstract?
@@ -40,20 +41,22 @@ class Cmdline_UI(Hangman_UI):
 
         print("Word: " + hidden_word)
 
-        print("Letters missed:  ", end="")
-        for letter in missed_letters:
+        print("Correct: ", end="")
+        for letter in guessed_letters:
             print(letter, end="")
         print()
 
-        print("Letters guessed: ", end="")
-        for letter in guessed_letters:
+        print("Incorrect: ", end="")
+        for letter in missed_letters:
             print(letter, end="")
         print()
     
     def get_char(self):
         print()
         print("Guess a letter: ", end="")
-        return get_char()
+        char = get_char()
+        print(char)
+        return char
 
 class Curses_UI(Hangman_UI):
     YPOS_TITLE = 0
@@ -80,7 +83,7 @@ class Curses_UI(Hangman_UI):
             curses.cbreak()
             self.stdscr.keypad(True)
         except:
-            print("Unexpected error:", sys.exc_info()[0])
+            print("Error: ", sys.exc_info()[0])
             print("Could not intialise Curses UI")
             # raise "Could not intialise Curses UI" # TypeError: exceptions must derive from BaseException
         finally:
@@ -123,7 +126,7 @@ class Hangman:
         self.missed_letters = []
         self.guessed_letters = []
         self.ui = ui
-        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com")
+        self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")
     
     def guess(self, letter):
         if letter in self.word and letter not in self.guessed_letters:
@@ -140,7 +143,7 @@ class Hangman:
 
     def won(self):
         if '_' not in self.hide_word():
-            return
+            return True
         return False
 
     def hide_word(self):
@@ -159,12 +162,12 @@ class Hangman:
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
 
 def rand_word():
-    with open("words_alpha.txt", "rt") as f:
+    with open(DICTIONARY_FILE, "rt") as f:
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
 
-def get_char():
-    if "_func" not in get_char.__dict__:         # figure out which function to use once, and store it in _func
+def get_char():                                 # there must(?) be a slight overhead to doing this, but it works
+    if "_func" not in get_char.__dict__:        # figure out which function to use once, and store it in _func
         try:                                    # for Windows-based systems
             import msvcrt                       # If successful, we are on Windows
             get_char._func=msvcrt.getch
@@ -185,7 +188,7 @@ def get_char():
 if __name__ == "__main__":
     print ("Welcome to Hangman")
     default = getpass.getuser()
-    name = input("Enter your name to start [" + default + "]: ")
+    name = input("Enter your name to start (default is your system username: " + default + "): ")
     if name == "":
         name = default
 
@@ -204,7 +207,7 @@ if __name__ == "__main__":
             break
         elif option == 'q':
             import sys
-            sys.exit(0)     # what about cleaning up the ui?
+            sys.exit(0)     # what about cleaning up the ui? There is no ui if we're here
     
     game = Hangman(rand_word(), ui)
     
@@ -216,12 +219,11 @@ if __name__ == "__main__":
                 break
         game.guess(char)
     
-    print()
-    print()
+    print() # ??
     if game.won():
         print("Congratulations")
     else:
         print("You lost")
-        print("The word was " + game.word)
-
+    
+    print("The word was " + game.word)
     print("Goodbye")
