@@ -4,11 +4,17 @@
 Hangman
 """
 
+import os
 import random
 import curses
 import getpass
+import backtrace
 
-board = ["❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️", "❤️️️️"]
+# nicer looking (and more informative?) backtraces
+backtrace.hook(reverse=False, align=False, strip_path=False, enable_on_envvar_only=False, on_tty=False, conservative=False, styles={})
+
+# 8 lives in hangman? https://en.wikipedia.org/wiki/Hangman_(game)
+board = ["❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️❤️️️️", "❤️️️️❤️️️️", "❤️️️️"]
 
 class Hangman_UI:
     # how to make abstract?
@@ -32,20 +38,24 @@ class Cmdline_UI(Hangman_UI):
         print(title)
 
     def print_status(self, hidden_word, missed_letters, guessed_letters):
+        print()
         print(board[len(missed_letters)])
+
         print("Word: " + hidden_word)
+
         print("Letters missed:  ", end="")
         for letter in missed_letters:
             print(letter, end="")
         print()
+
         print("Letters guessed: ", end="")
         for letter in guessed_letters:
             print(letter, end="")
         print()
-        print(board[len(missed_letters)])
     
     def get_input(self):
-        print("Guess a letter: ")
+        print()
+        print("Guess a letter: ", end="")
         return get_char()
 
 class Curses_UI(Hangman_UI):
@@ -64,7 +74,6 @@ class Curses_UI(Hangman_UI):
     #     curses.echo()
     #     curses.endwin()
     #     self.stdscr.keypad(False)
-
 
     def __init__(self):
         try:
@@ -152,7 +161,13 @@ class Hangman:
         return rtn
 
     def get_input(self):
-        return self.ui.get_input()
+        char = self.ui.get_input()
+        print("char: ", char, ", ord: ", ord(char))
+        print("os.linesep: ", os.linesep, ", ord: ", ord(os.linesep))
+        # if char not in "\n":
+        # if char not in os.linesep:
+        if char != os.linesep:
+            return char
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
@@ -245,7 +260,8 @@ if __name__ == "__main__":
     while not game.over():
         game.print_status()
         user_input = game.get_input()
-        game.guess(user_input)
+        if user_input != None:
+            game.guess(user_input)
 
     if game.won():
         print("Congratulations")
