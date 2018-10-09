@@ -82,13 +82,10 @@ class Curses_UI(Hangman_UI):
             curses.noecho()
             curses.cbreak()
             self.stdscr.keypad(True)
-
-            # play
-            # main()
         except:
             print("Unexpected error:", sys.exc_info()[0])
-            # raise "Could not intialise Curses UI" # TypeError: exceptions must derive from BaseException
             print("Could not intialise Curses UI")
+            # raise "Could not intialise Curses UI" # TypeError: exceptions must derive from BaseException
         finally:
             # restore command line environment
             curses.nocbreak()
@@ -117,8 +114,6 @@ class Curses_UI(Hangman_UI):
         self.stdscr.refresh()
 
     def get_input(self):
-        # print("Guess a letter: ")
-        # return get_char()
         return self.stdscr.getch()
 
 def rpad(string, width=80):
@@ -162,55 +157,14 @@ class Hangman:
 
     def get_input(self):
         return self.ui.get_input()
-        # char = self.ui.get_input()
-        # # print("char: ", char, ", ord: ", ord(char))
-        # # print("os.linesep: ", os.linesep, ", ord: ", ord(os.linesep))
-        # # if char not in "\n":
-        # # if char not in os.linesep:
-        # if char != os.linesep:
-        #     return char
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
-        # stdscr.addstr(Curses_UI.YPOS_LIVES, 0, rpad(board[len(self.missed_letters)]))
-        # # print("Word: " + self.hide_word())
-        # stdscr.addstr(Curses_UI.YPOS_WORD, 0, rpad(self.hide_word()))
-        # # print("len(word): ", len(self.word), ", len(hide_word): ", len(self.hide_word()))
-        # missed = "Letters missed: "
-        # for letter in self.missed_letters:
-        #     missed += letter
-        # stdscr.addstr(Curses_UI.YPOS_MISSED, 0, rpad(missed))
-        # # print("Letters guessed: ", end="")
-        # guessed = "Letters guessed: "
-        # for letter in self.guessed_letters:
-        #     guessed += letter
-        # stdscr.addstr(Curses_UI.YPOS_TITLE, 0, rpad(guessed))
-        # stdscr.refresh()
 
 def rand_word():
-    # bank = "one two three four five".split()
     with open("words_alpha.txt", "rt") as f:
         bank = f.readlines()
     return bank[random.randint(0, len(bank))].strip()
-
-# def main():
-#     ui = Curses_UI()
-#     # ui = Cmdline_UI()
-#     game = Hangman(rand_word(), ui)
-#     while not game.over():
-#         game.print_status()
-#         # user_input = input("Enter a letter: ")
-#         user_input = game.get_input()
-#         game.guess(user_input)
-
-#     # game.print_status()
-#     if game.won():
-#         print("Congratulations")
-#     else:
-#         print("You lost")
-#     print("The word was " + game.word)
-
-#     print("Goodbye")
 
 def get_char():
     if "_func" not in get_char.__dict__:         # figure out which function to use once, and store it in _func
@@ -252,9 +206,8 @@ if __name__ == "__main__":
             game = Hangman(rand_word(), ui)
             break
         elif option == 'q':
-            # break
             import sys
-            sys.exit(0)
+            sys.exit(0)     # what about cleaning up the ui?
     
     game = Hangman(rand_word(), ui)
     
@@ -262,7 +215,7 @@ if __name__ == "__main__":
         game.print_status()
         while True:
             user_input = game.get_input()
-            if user_input not in [None, os.linesep]:    # don't make the ui check this
+            if user_input not in [None, os.linesep]:    # don't make the ui check this - but the game maybe should
                 break
         game.guess(user_input)
     
@@ -275,20 +228,3 @@ if __name__ == "__main__":
         print("The word was " + game.word)
 
     print("Goodbye")
-
-
-    # try:
-    #     # set up curses environment
-    #     stdscr = curses.initscr()
-    #     curses.noecho()
-    #     curses.cbreak()
-    #     stdscr.keypad(True)
-
-    #     # play
-    #     main()
-    # finally:
-    #     # restore command line environment
-    #     curses.nocbreak()
-    #     stdscr.keypad(False)
-    #     curses.echo()
-    #     curses.endwin()
