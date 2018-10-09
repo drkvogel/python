@@ -41,7 +41,7 @@ class Cmdline_UI(Hangman_UI):
 
         print("Word: " + hidden_word)
 
-        print("Correct: ", end="")
+        print("Correct:  ", end="")
         for letter in guessed_letters:
             print(letter, end="")
         print()
@@ -99,18 +99,19 @@ class Curses_UI(Hangman_UI):
 
     def print_status(self, hidden_word, missed_letters, guessed_letters):
         self.stdscr.addstr(Curses_UI.YPOS_LIVES, 0, rpad(board[len(missed_letters)]))
+        
         self.stdscr.addstr(Curses_UI.YPOS_WORD, 0, rpad(hidden_word))
         
-        missed = "Letters missed: "
+        guessed = "Correct: "
+        for letter in guessed_letters:
+            guessed += letter
+        self.stdscr.addstr(Curses_UI.YPOS_GUESSED, 0, rpad(guessed))
+
+        missed = "Incorrect: "
         for letter in missed_letters:
             missed += letter
         self.stdscr.addstr(Curses_UI.YPOS_MISSED, 0, rpad(missed))
-        
-        guessed = "Letters guessed: "
-        for letter in guessed_letters:
-            guessed += letter
-        
-        self.stdscr.addstr(Curses_UI.YPOS_GUESSED, 0, rpad(guessed))
+    
         self.stdscr.refresh()
 
     def get_char(self):
