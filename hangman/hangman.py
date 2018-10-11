@@ -51,12 +51,12 @@ class Cmdline_UI(Hangman_UI):
             print(letter, end="")
         print()
     
-    def get_char(self, ignore=""):
+    def get_letter(self, ignore=""):
         print()
         print("Guess a letter: ", end="")
         while True:
             char = get_char()
-            if char != os.linesep and char not in ignore:
+            if char != os.linesep and char not in ignore and char.isalpha():
                 print(char)
                 return char
 
@@ -143,7 +143,6 @@ class Hangman:
         return True
     
     def over(self):
-        # print("len(self.missed): ", len(self.missed_letters), ", len(board): ", len(board))
         return self.won() or len(self.missed_letters) == len(board)
 
     def won(self):
@@ -161,10 +160,7 @@ class Hangman:
         return rtn
 
     def get_letter(self):
-        char = self.ui.get_char(self.missed_letters + self.guessed_letters)
-        if char not in [None, os.linesep]:  # unnecessary now??
-            return char
-        return None
+        return self.ui.get_letter(self.missed_letters + self.guessed_letters)
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
