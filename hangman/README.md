@@ -12,7 +12,7 @@ use with keyword for curses ui
 cmdline: two single hearts before lose - lose() logic?
 should not accept guess if already in guessed or missed?
     hard rules - switchable rules?
-vscode: Refactor failed. expected string or bytes-like object 
+vscode: Refactor failed. expected string or bytes-like object
 
 ## done
 

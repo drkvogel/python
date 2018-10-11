@@ -51,12 +51,14 @@ class Cmdline_UI(Hangman_UI):
             print(letter, end="")
         print()
     
-    def get_char(self):
+    def get_char(self, ignore=""):
         print()
         print("Guess a letter: ", end="")
-        char = get_char()
-        print(char)
-        return char
+        while True:
+            char = get_char()
+            if char != os.linesep and char not in ignore:
+                print(char)
+                return char
 
 class Curses_UI(Hangman_UI):
     RULESET_EASY, RULESET_HARD = range(2)   # https://stackoverflow.com/questions/36932/how-can-i-represent-an-enum-in-python
@@ -101,7 +103,6 @@ class Curses_UI(Hangman_UI):
 
     def print_status(self, hidden_word, missed_letters, guessed_letters):
         self.stdscr.addstr(Curses_UI.YPOS_LIVES, 0, rpad(board[len(missed_letters)]))
-        
         self.stdscr.addstr(Curses_UI.YPOS_WORD, 0, rpad(hidden_word))
         
         guessed = "Correct: "
@@ -127,17 +128,18 @@ class Hangman:
     def __init__(self, word, ui):
         self.word = word
         self.missed_letters = []
-        self.guessed_letters = []
         self.ui = ui    # ??
+        self.guessed_letters = []
         self.ui.print_title("Hangman by Chris Bird (chrisjbird@gmail.com)")
-    
+
     def guess(self, letter):
-        if letter in self.word and letter not in self.guessed_letters:
-            self.guessed_letters.append(letter)
-        elif letter not in self.word and letter not in self.missed_letters:
-            self.missed_letters.append(letter)
-        else:
-            return False
+        if letter not in [None, os.linesep]:
+            if letter in self.word and letter not in self.guessed_letters:
+                self.guessed_letters.append(letter)
+            elif letter not in self.word and letter not in self.missed_letters:
+                self.missed_letters.append(letter)
+            else:
+                return False
         return True
     
     def over(self):
@@ -158,8 +160,11 @@ class Hangman:
                 rtn += letter
         return rtn
 
-    def get_char(self):
-        return self.ui.get_char()
+    def get_letter(self):
+        char = self.ui.get_char(self.missed_letters + self.guessed_letters)
+        if char not in [None, os.linesep]:  # unnecessary now??
+            return char
+        return None
 
     def print_status(self):
         self.ui.print_status(self.hide_word(), self.missed_letters, self.guessed_letters)
@@ -188,8 +193,6 @@ def get_char():                                 # there must(?) be a slight over
             get_char._func=_ttyRead
     return get_char._func()
 
-
-
 if __name__ == "__main__":
     print ("Welcome to Hangman")
 
@@ -216,10 +219,9 @@ if __name__ == "__main__":
     while not game.over():
         game.print_status()
         while True:
-            char = game.get_char()
-            if char not in [None, os.linesep]:    # don't make the ui check this - but the game maybe should
+            letter = game.get_letter()
+            if letter != None and game.guess(letter):   # first clause unnecessary now??
                 break
-        game.guess(char)
     
     print() # ??
     if game.won():
