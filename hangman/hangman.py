@@ -37,18 +37,19 @@ class Cmdline_UI(Hangman_UI):
 
     def print_status(self, hidden_word, missed_letters, guessed_letters):
         print()
+        
         print(board[len(missed_letters)])
 
-        print("Word: " + hidden_word)
+        print("Word:      " + hidden_word)
 
         print("Correct:   ", end="")
         for letter in guessed_letters:
-            print(letter, end="")
+            print(letter + " ", end="")
         print()
 
         print("Incorrect: ", end="")
         for letter in missed_letters:
-            print(letter, end="")
+            print(letter + " ", end="")
         print()
     
     def get_letter(self, ignore=""):
@@ -157,6 +158,7 @@ class Hangman:
                 rtn += '_'
             else:
                 rtn += letter
+            rtn += " "
         return rtn
 
     def get_letter(self):
