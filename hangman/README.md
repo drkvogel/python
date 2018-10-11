@@ -3,12 +3,21 @@
 
 With a switchable UI - you can play from the command line, or with an `ncurses` text user interface (TUI).
 
+To run:
+
+    python hangman.py
+
+or
+
+    chmod u+x hangman.py
+    ./hangman.py
+
 ## todo
 
 curses ui messes up terminal regardless of finally block or with statement
+use with keyword for curses ui
 shouldn't return prompt on cmdline if guessed letter already guessed
 i18n
-use with keyword for curses ui
 cmdline: two single hearts before lose - lose() logic?
 should not accept guess if already in guessed or missed?
     hard rules - switchable rules?
