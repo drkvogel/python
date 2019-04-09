@@ -1,4 +1,8 @@
 
+bpython - better python REPL
+
+✗ pip3 install bpython
+
 
 ### Swagger / OpenAPI (OAS)
 
