@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import inquirer
+import re # needed?
 import pprint
 
 # text
@@ -12,7 +13,10 @@ questions = [
                 # validate=lambda _, x: re.match('\+?\d[\d ]+\d', x), # none of these return True
                 # validate=lambda x: re.match('\+?\d[\d ]+\d', x),
                 # validate=lambda _, x: re.match('.*', x),
-                validate=True,
+                # validate=True,  # this works...
+                validate=lambda x, _: re.match('^.*$', x), # nope
+                # validate=lambda x, _: re.match('\+?\d[\d ]+\d', x), # no
+                # validate=lambda x, _: re.match('\d+', x), # no
                 )
 ]
 answers = inquirer.prompt(questions)
