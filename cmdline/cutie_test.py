@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import cutie
+import pprint
 
 if cutie.prompt_yes_or_no('Are you brave enough to continue?'):
     # List of names to select from, including some captions
@@ -20,9 +21,13 @@ if cutie.prompt_yes_or_no('Are you brave enough to continue?'):
     captions = [0, 2, 7]
     
     # Get the name
-    name = names[cutie.select(names, caption_indices=captions, selected_index=8)]
-    print(f'Welcome, {name}')
+    # name = names[cutie.select(names, caption_indices=captions, selected_index=8)]
+    # print(f'Welcome, {name}')
     
+    # get multiple
+    selected = cutie.select_multiple(names, caption_indices=captions)
+    pprint.pprint(selected)
+
     # Get an integer greater or equal to 0
     age = cutie.get_number( 'What is your age?', min_value=0, allow_float=False)
     
