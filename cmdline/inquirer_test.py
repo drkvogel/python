@@ -14,10 +14,16 @@ questions = [
                 # validate=lambda x: re.match('\+?\d[\d ]+\d', x),
                 # validate=lambda _, x: re.match('.*', x),
                 # validate=True,  # this works...
-                validate=lambda x, _: re.match('^.*$', x), # nope
+                # validate=lambda x, _: re.match('^.*$', x), # nope
                 # validate=lambda x, _: re.match('\+?\d[\d ]+\d', x), # no
                 # validate=lambda x, _: re.match('\d+', x), # no
-                )
+                # validate=lambda x, _: re.match('.*', x) is not None,
+                # validate=re.match('.*', x) is not None, # NameError: name 'x' is not defined
+                # validate=lambda x, _: re.match('.*', _) is not None, # yep
+                # validate=lambda x, _: re.match('\d+', _) is not None, # yep (with digits)
+                # validate=lambda x, _: re.match('\+?\d[\d ]+\d', _) is not None, # yep (original regex)
+                validate=lambda x, _: re.match('\+?\d[\d ]+\d', _), # also works, don't need `is not None`
+  )
 ]
 answers = inquirer.prompt(questions)
 pprint.pprint(answers)
