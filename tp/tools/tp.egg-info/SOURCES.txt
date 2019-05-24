@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/tp
+tp/__init__.py
+tp/aws.py
+tp.egg-info/PKG-INFO
+tp.egg-info/SOURCES.txt
+tp.egg-info/dependency_links.txt
+tp.egg-info/requires.txt
+tp.egg-info/top_level.txt
