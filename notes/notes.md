@@ -101,4 +101,6 @@ union() 	                        # Return a set containing the union of sets
 update()    	                        # Update the set with the union of this set and others
 ```
 
+How strict is python about double quotes vs single quotes in parameters? : learnpython (https://www.reddit.com/r/learnpython/comments/8030b7/how_strict_is_python_about_double_quotes_vs/)
+>single vs double quotes: "PEP 8 says pick one and use it consistently."
 
