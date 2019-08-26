@@ -1,5 +1,7 @@
 
 
+
+
 ### Swagger / OpenAPI (OAS)
 
 Today, the most commonly used definition for APIs is the OpenAPI Specification. The OpenAPI Specification (OAS), which is based on the original Swagger Specification, defines RESTful standards for APIs. OAS Definitions map resources and operations for an API.
@@ -89,18 +91,22 @@ difference()    	                # Returns a set containing the difference betwe
 difference_update() 	            # Removes the items in this set that are also included in another, specified set
 discard()   	                    # Remove the specified item
 intersection()  	                # Returns a set, that is the intersection of two other sets
-intersection_update()   	                        # Removes the items in this set that are not present in other, specified set(s)
-isdisjoint()    	                        # Returns whether two sets have a intersection or not
-issubset()  	                        # Returns whether another set contains this set or not
-issuperset()    	                        # Returns whether this set contains another set or not
+intersection_update()   	        # Removes the items in this set that are not present in other, specified set(s)
+isdisjoint()    	                # Returns whether two sets have a intersection or not
+issubset()  	                    # Returns whether another set contains this set or not
+issuperset()    	                # Returns whether this set contains another set or not
 pop()   	                        # Removes an element from the set
-remove()    	                        # Removes the specified element
-symmetric_difference()  	                        # Returns a set with the symmetric differences of two sets
-symmetric_difference_update()   	                        # inserts the symmetric differences from this set and another
+remove()    	                    # Removes the specified element
+symmetric_difference()  	        # Returns a set with the symmetric differences of two sets
+symmetric_difference_update()   	# inserts the symmetric differences from this set and another
 union() 	                        # Return a set containing the union of sets
-update()    	                        # Update the set with the union of this set and others
+update()    	                    # Update the set with the union of this set and others
 ```
 
 How strict is python about double quotes vs single quotes in parameters? : learnpython (https://www.reddit.com/r/learnpython/comments/8030b7/how_strict_is_python_about_double_quotes_vs/)
 >single vs double quotes: "PEP 8 says pick one and use it consistently."
 
+
+bpython - better python REPL
+
+`pip3 install bpython`
