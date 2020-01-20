@@ -6,12 +6,21 @@
 
 [I recommend *ptpython* for all vim-loving pythonistas! : vim ](https://www.reddit.com/r/vim/comments/6496db/i_recommend_ptpython_for_all_vimloving_pythonistas/)
 
+[prompt-toolkit ](https://github.com/prompt-toolkit)
+
+pypython select text - hold down alt/opt
+[terminal scrolling · Issue #121 · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/issues/121)
+>When mouse support has been enabled, all mouse events are captured, including scroll events. That way, the application running in the terminal can decide what to do with it. You can disable mouse support. Holding alt down tells the terminal to use the real scrollbar and move the up.
+
+
+### edit config
+
+(can't save, currently)
 
 [ptypython save settings](https://www.google.com/search?q=ptypython+save+settings&ie=UTF-8)
 [ptpython doesn't save search preferences · Issue #55 · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/issues/55)
 [Save config from menu · Issue #48 · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/issues/48)
 [ptpython/config.py at master · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/blob/master/examples/ptpython_config/config.py#L71)
-[prompt-toolkit ](https://github.com/prompt-toolkit)
 [ptpython/config.py at master · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/blob/master/examples/ptpython_config/config.py)
 
 
