@@ -1,4 +1,17 @@
 
+
+[cpython - How can I tell which python implementation I'm using?](https://stackoverflow.com/questions/14718135/how-can-i-tell-which-python-implementation-im-using)
+
+```
+20/01/21 2:40:54 kvogel-macbook:~/Downloads
+❯ ptpython
+```
+```py
+>>> import platform
+>>> platform.python_implementation()
+'CPython'
+```
+
 [python - Which setup is more efficient? Flask with pypy, or Flask with gevent?](https://stackoverflow.com/questions/14294643/which-setup-is-more-efficient-flask-with-pypy-or-flask-with-gevent)
 >Both 'pypy' and 'gevent' are supposed to provide high performance. Pypy is supposedly faster than CPython, while gevent is based on co-routines and greenlets, which supposedly makes for a faster web server.
 
