@@ -1,4 +1,19 @@
 
+# tuples
+
+a tuple is a collection which is ordered and unchangeable
+
+```py
+thistuple = tuple(("apple", "banana", "cherry"))
+for...in
+if...in
+len()
+del thistuple
+count()	            # Returns the number of times a specified value occurs in a tuple
+index()	            # Searches the tuple for a specified value and returns the position of where it was found
+```
+
+
 [Python Tuples ](https://www.w3schools.com/python/python_tuples.asp)
 
 

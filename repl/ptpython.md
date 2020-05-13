@@ -6,12 +6,15 @@
 
 [I recommend *ptpython* for all vim-loving pythonistas! : vim ](https://www.reddit.com/r/vim/comments/6496db/i_recommend_ptpython_for_all_vimloving_pythonistas/)
 
-[prompt-toolkit ](https://github.com/prompt-toolkit)
+### select text
 
-pypython select text - hold down alt/opt
+hold down `alt`/`opt`
+doesn't work in VSCode terminal!
+
 [terminal scrolling · Issue #121 · prompt-toolkit/ptpython ](https://github.com/prompt-toolkit/ptpython/issues/121)
 >When mouse support has been enabled, all mouse events are captured, including scroll events. That way, the application running in the terminal can decide what to do with it. You can disable mouse support. Holding alt down tells the terminal to use the real scrollbar and move the up.
 
+[prompt-toolkit ](https://github.com/prompt-toolkit)
 
 ### edit config
 
