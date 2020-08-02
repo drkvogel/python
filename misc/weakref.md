@@ -34,33 +34,17 @@
 [How to delete every reference of an object in Python?](https://stackoverflow.com/questions/3013304/how-to-delete-every-reference-of-an-object-in-python)
 
 ```py
->>> Foo = undefined
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'undefined' is not defined
-
-name 'undefined' is not defined
->>>
->>> Foo = null
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'null' is not defined
-
-name 'null' is not defined
+# name 'undefined' is not defined
+# name 'null' is not defined
 >>> Foo = None
 >>> Foo
->>>
 >>> del Foo
 >>> Foo
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'Foo' is not defined
-
-name 'Foo' is not defined
 >>>
 ```
-
-[How to delete every reference of an object in Python?](https://stackoverflow.com/questions/3013304/how-to-delete-every-reference-of-an-object-in-python)
 
 ```py
 >>> x = "something"
@@ -68,16 +52,12 @@ name 'Foo' is not defined
 >>> l =[b]
 >>> l
 ['something']
-
 >>> type(l)
 <class 'list'>
-
 >>> type(x)
 <class 'str'>
-
 >>> type(b)
 <class 'str'>
-
 >>> del x
 >>> x
 Traceback (most recent call last):
@@ -106,7 +86,7 @@ name 'b' is not defined
 ```
 
 Do garbage collect with `gc.collect()`, string is still in `l` despite having no direct references:
-```
+```py
 >>> import gc
 >>> gc.collect()
 4403

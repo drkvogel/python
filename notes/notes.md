@@ -105,3 +105,12 @@ bpython - better python REPL: `pip3 install bpython`
 [Hubbard model - Wikipedia ](https://en.wikipedia.org/wiki/Hubbard_model)
 [Quantum Monte Carlo](https://www.google.com/search?q=Quantum+Monte+Carlo&ie=UTF-8)
 [Quantum Monte Carlo - Wikipedia ](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo)
+
+
+some podcast I was listening to:
+native testing
+why is python slow?
+kyle let go from his job due to pandemic
+christopher bailey
+[About Anthony Shaw – Real Python ](https://realpython.com/team/ashaw/)
+why can't I be doing cool stuff like this instsead of nightmare scenarios?

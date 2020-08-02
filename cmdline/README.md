@@ -1,4 +1,30 @@
 
+
+
+[Python Prompt Toolkit — prompt_toolkit 1.0.15 documentation ](https://python-prompt-toolkit.readthedocs.io/en/1.0.15/)
+prompt_toolkit is a library for building powerful interactive command lines and terminal applications in Python.
+
+
+### argparse
+
+[The Easy Guide to Python Command Line Arguments 😎 - Level Up Coding ](https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1)
+>Today (Oct 7, 2019), argparse is by far the best and most commonly used.
+
+
+
+[Learn Enough Python to be Useful: argparse - Towards Data Science ](https://towardsdatascience.com/learn-enough-python-to-be-useful-argparse-e482e1764e05)
+[Argparse Tutorial — Python 3.8.3 documentation ](https://docs.python.org/3/howto/argparse.html)
+
+### click
+
+[argparse vs click](https://www.google.com/search?q=argparse+vs+click)
+[Karol Kuczmarski's Blog – Please don’t use Click ](http://xion.io/post/programming/python-dont-use-click.html)
+[Click reviews? Should I migrate to click from argparse? : Python ](https://www.reddit.com/r/Python/comments/73xb5y/click_reviews_should_i_migrate_to_click_from/)
+[Writing Python Command-Line Tools With Click – dbader.org ](https://dbader.org/blog/python-commandline-tools-with-click)
+[python - Why use argparse rather than optparse?](https://stackoverflow.com/questions/3217673/why-use-argparse-rather-than-optparse)
+
+
+
 ### python-inguirer
 
 [magmax/python-inquirer: A collection of common interactive command line user interfaces, based on Inquirer.js ](https://github.com/SBoudrias/Inquirer.js/) (https://github.com/magmax/python-inquirer)

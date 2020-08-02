@@ -1,8 +1,4 @@
-Tal <tal.zvon@gmail.com>
-To:
-Django users
-
-26 Feb at 18:26
+Tal <tal.zvon@gmail.com> To: Django users 26 Feb at 18:26
 
 I've been developing web applications using Flask and Django for about a year now, and although I've come across the term WSGI a bunch of times in both frameworks, I never really understood what it did. I'm sure I'm not the only one. The quick explanations I read never made sense to me. Even PEP3333 didn't really give me a clear picture of how WSGI fits in with Nginx, and Django. There are a bunch of articles online that quickly show how to setup nginx, gunicorn/uwsgi and django to work in production, and once I figured that out, I never really had a reason to figure out WSGI again. But it's been a year now, and I probably should understand at least the basics.
 

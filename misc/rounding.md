@@ -1,0 +1,10 @@
+
+mean rounding error python - Google Search (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=mean%20rounding%20error%20python%20-%20Google%20Search&pos=576&uri=https://www.google.com/search?sxsrf=ALeKk01I_Q0diCeRp-1Ngbxr9nGkgfr_qg%3A1591370620126&ei=fGPaXpepB9KsgQa6m7XoBg&q=mean+rounding+error+python&oq=mean+rounding+error+python&gs_lcp=CgZwc3ktYWIQAzIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeOgcIABBHELADOgYIABAWEB5Q3r8BWMzHAWChzAFoAXAAeACAAYABiAGfBZIBAzYuMZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwiX15LE_erpAhVSVsAKHbpNDW0Q4dUDCAw&uact=5)
+    round off error python - Google Search (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=round%20off%20error%20python%20-%20Google%20Search&pos=0&uri=https://www.google.com/search?sxsrf=ALeKk01I_Q0diCeRp-1Ngbxr9nGkgfr_qg:1591370620126&q=round+off+error+python&sa=X&ved=2ahUKEwiX15LE_erpAhVSVsAKHbpNDW0Q1QIoBHoECAoQBQ)
+    Python rounding error with float numbers - Stack Overflow (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Python%20rounding%20error%20with%20float%20numbers%20-%20Stack%20Overflow&pos=0&uri=https://stackoverflow.com/questions/5997027/python-rounding-error-with-float-numbers)
+    Python Float rounding errors - Stack Overflow (https://stackoverflow.com/questions/16551128/python-float-rounding-errors)
+        9.4. decimal — Decimal fixed point and floating point arithmetic — Python 2.7.18 documentation (https://docs.python.org/2/library/decimal.html)
+        Comparing Floating Point Numbers, 2012 Edition | Random ASCII – tech blog of Bruce Dawson (https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/)
+        What Every Computer Scientist Should Know About Floating-Point Arithmetic (https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
+        The Floating-Point Guide - Basic Answers (https://floating-point-gui.de/basic/)
+    How to Round Numbers in Python – Real Python (https://realpython.com/python-rounding/)

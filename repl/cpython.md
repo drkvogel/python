@@ -1,7 +1,6 @@
 
 
 
-
 history with arrow keys escape sequences
 
 ```
