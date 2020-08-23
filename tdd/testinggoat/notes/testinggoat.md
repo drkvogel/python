@@ -7,15 +7,15 @@
 
 
 [Preface ](https://www.obeythetestinggoat.com/book/preface.html)
-    Bibliography (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Bibliography&pos=0&uri=https://www.obeythetestinggoat.com/book/bibliography.html#dip)
-    Two Scoops of Django - Google Search (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Two%20Scoops%20of%20Django%20-%20Google%20Search&pos=0&uri=https://www.google.com/search?q=Two+Scoops+of+Django&oq=Two+Scoops+of+Django&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8)
-    Harry Percival (@hjwp) / Twitter (chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=Harry%20Percival%20(%40hjwp)%20%2F%20Twitter&pos=4&uri=https://twitter.com/hjwp)
+[Bibliography ](https://www.obeythetestinggoat.com/book/bibliography.html#dip)
+[Two Scoops of Django](https://www.google.com/search?q=Two+Scoops+of+Django&ie=UTF-8)
+[Harry Percival (@hjwp) / Twitter ](https://twitter.com/hjwp)
 
 
 [journeyman - definition, etymology and usage, examples and related words ](http://www.finedictionary.com/journeyman.html)
-Journeyman A competent and experienced worker who performs adequately but without a high level of expertise or imagination.
-Journeyman Formerly, a man hired to work by the day; now, commonly, one who has finished an apprenticeship and is a competent worker in a handicraft or trade, but has not received recognition as a master; -- distinguished from apprentice and from master workman.
-"I have thought some of nature's journeymen had made men, and not made them well."
+>Journeyman A competent and experienced worker who performs adequately but without a high level of expertise or imagination.
+>Journeyman Formerly, a man hired to work by the day; now, commonly, one who has finished an apprenticeship and is a competent worker in a handicraft or trade, but has not received recognition as a master; -- distinguished from apprentice and from master workman.
+>"I have thought some of nature's journeymen had made men, and not made them well."
 
 TDD? It sounds like a really sensible approach, a really good habit to get into — ​like regularly flossing your teeth.
 
@@ -34,7 +34,15 @@ I hope to teach you how to use TDD to get more reliably to our shared, holy goal
 
 building a web app from scratch using tools like Django, Selenium, jQuery, and Mocks.
 
-Don’t use Django 2 - This book was published before Django 2.0 came out
+>Don’t use Django 2 - This book was published before Django 2.0 came out
+    which edition was this warning from?
+
+2020-08-23 12:14:05
+```
+20/08/23 11:23:11 kvogel-macbook-2018:~/Downloads
+❯ cp OReilly.Test-Driven.Development.with.Python.2nd.Edition.1491958707_Early.Release/OReilly.Test-Driven.Development.with.Python.2nd.Edition.1491958707_Early.Release.epub ~/gdrive/ebooks/development
+❯ open ~/gdrive/ebooks/development/OReilly.Test-Driven.Development.with.Python.2nd.Edition.1491958707_Early.Release.epub
+```
 
 
 On Anaconda
