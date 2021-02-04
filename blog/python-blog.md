@@ -1,7 +1,33 @@
 
+[10 Cool Python Project Ideas for Python Developers  by Claire D. Costa  Sep, 2020  Towards Data Science ](https://towardsdatascience.com/10-cool-python-project-ideas-for-python-developers-7953047e203)
 
+
+[Episode #28: Using Pylance to Write Better Python Inside of Visual Studio Code – The Real Python Podcast ](https://realpython.com/podcasts/rpp/28/?utm_campaign=2020-09-25)
+
+[A Pythonic Guide to SOLID Design Principles - DEV Community 👩‍💻👨‍💻 ](https://dev.to/ezzy1337/a-pythonic-guide-to-solid-design-principles-4c8i)
+
+[Learn Pytest in 60 Minutes : Python Unit Testing Framework](https://www.youtube.com/watch?v=bbp_849-RZ4)
+
+that really good Python site: [PyCoder’s Weekly](https://pycoders.com/issues/430)
+
+
+[Andrew Burrows - Testing the untestable: a beginner’s guide to mock objects](https://www.youtube.com/watch?v=jsjParCB7BU)
+[Mocking Strategies in Python](https://www.youtube.com/watch?v=zW0f4ZRYF5M)
+[Intro to Python Mocks](https://www.youtube.com/watch?v=smPbDqGjFAI)
+
+[Python for Beginners — Object-Oriented Programming  by Siva Ganesh Kantamani  Better Programming  Jul, 2020  Medium ](https://medium.com/better-programming/python-for-beginners-object-oriented-programming-3b231bb3dd49)
+
+
+[8 Advanced Python Tricks Used by Seasoned Programmers ](https://towardsdatascience.com/8-advanced-python-tricks-used-by-seasoned-programmers-757804975802)
 
 [__slots__](/misc/__slots__.md)
+
+[Why Does Python Recommend the Snake-Case Nomenclature?  Pawan Jain in Towards Data Science - chrisjbird@gmail.com - Gmail ](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXBzMGmDLXHdQQdBlnCnkfDnD)
+
+[Become a Python “One-Liners” Specialist  by Radian Krisno  Jun, 2020  Towards Data Science ](https://towardsdatascience.com/become-a-python-one-liners-specialist-8c8599d6f9c5)
+
+[Python Job Board – Python Jobs HQ ](https://www.pythonjobshq.com/?__s=5r8stehqp1fcvezhd5ng)
+[Grow Your Python Portfolio With 13 Intermediate Project Ideas – Real Python ](https://realpython.com/courses/intermediate-project-ideas/)
 
 
 [Monty Python: The Lost World of Roiurama / Six More Minutes of Monty Python's Flying Circus](http://www.montypython.net/scripts/lostworld.php)
@@ -340,3 +366,6 @@ notes/wsgi.md
 blog/210202-os.md
 
 environment/pipenv.md
+
+[Distributing python packages protected with Cython  by Artem Vasilyev  The Startup  Medium ](https://medium.com/swlh/distributing-python-packages-protected-with-cython-40fc29d84caf)
+

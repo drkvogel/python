@@ -25,10 +25,8 @@ zsh: command not found: pipenv
 ❯ pip3 install pipenv
 Collecting pipenv
   Downloading pipenv-2020.11.15-py2.py3-none-any.whl (3.9 MB)
-     |████████████████████████████████| 3.9 MB 8.9 MB/s
 Collecting virtualenv
   Downloading virtualenv-20.4.2-py2.py3-none-any.whl (7.2 MB)
-     |████████████████████████████████| 7.2 MB 8.7 MB/s
 Collecting virtualenv-clone>=0.2.5
   Downloading virtualenv_clone-0.5.4-py2.py3-none-any.whl (6.6 kB)
 Requirement already satisfied: pip>=18.0 in /usr/lib/python3/dist-packages (from pipenv) (20.0.2)
@@ -39,7 +37,6 @@ Collecting filelock<4,>=3.0.0
   Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
 Collecting distlib<1,>=0.3.1
   Downloading distlib-0.3.1-py2.py3-none-any.whl (335 kB)
-     |████████████████████████████████| 335 kB 9.2 MB/s
 Collecting appdirs<2,>=1.4.3
   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
 Installing collected packages: filelock, distlib, appdirs, virtualenv, virtualenv-clone, pipenv
@@ -53,7 +50,9 @@ Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 pipenv-2020.1
 21/02/1 16:29:12 kvogel-elitebook:~/p/primrose/kilo ±(master)
 ❯ which pipenv
 pipenv not found
-
+```
+> `WARNING: The scripts pipenv and pipenv-resolver are installed in '/home/kvogel/.local/bin' which is not on PATH.`
+```
 21/02/2 2:52:42 kvogel-elitebook:~/projects/primrose ±(master) ✗ 
 ❯ ls ~/.local/bin              
 mako-render*  markdown2*  markdown_py*  pdoc*  pdoc3*  pipenv*  pipenv-resolver*  virtualenv*  virtualenv-clone*
