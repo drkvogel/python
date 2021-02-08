@@ -1,5 +1,58 @@
 
+[python - How do I install pip on macOS or OS X?](https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macos-or-os-x)
+[make python3 default mac](https://www.google.com/search?q=make+python3+default+mac&ie=UTF-8)
+[How to set Python's default version to 3.x on OS X?](https://stackoverflow.com/questions/18425379/how-to-set-pythons-default-version-to-3-x-on-os-x)
+[The right and wrong way to set up Python 3 on MacOS  Opensource.com ](https://opensource.com/article/19/5/python-3-default-mac)
+[xkcd: Python Environment ](https://xkcd.com/1987/)
+just use python3 and pip3 for one-off programs, and virtualenv otherwise
+
 [10 Cool Python Project Ideas for Python Developers  by Claire D. Costa  Sep, 2020  Towards Data Science ](https://towardsdatascience.com/10-cool-python-project-ideas-for-python-developers-7953047e203)
+
+```
+2020-02-18 23:52:17 user@users-MBP ~
+$ pip3 install ptpython
+Collecting ptpython
+...
+2020-02-18 23:52:31 user@users-MBP ~
+$ ptpython
+```
+
+```py
+>>> import sys
+>>> sys.version
+'3.7.0 (default, Aug 22 2018, 15:22:33) \n[Clang 9.1.0 (clang-902.0.39.2)]'
+
+>>> from datetime import date
+>>> user = 'eric_idle'
+>>> member_since = date(1975, 7, 31)
+>>> f'{user} {member_since}'
+'eric_idle 1975-07-31'
+
+>>> def parse(family):
+...     lastname, *members = family.split()
+...     return (lastname.upper(), *members)
+>>> parse('simpsons homer marge bart lisa sally')
+('SIMPSONS', 'homer', 'marge', 'bart', 'lisa', 'sally')
+```
+
+```
+❯ bpython
+bpython version 0.18 on top of Python 3.7.3 /usr/local/anaconda3/bin/python
+```
+```py
+>>> from statistics import mean
+>>> mean([1.959, 1.205, 1.198, 1.198, 1.175, 1.169])
+1.3173333333333335
+>>> mean([0.892, 0.877, 0.864, 0.893, 0.865, 0.889])
+0.88
+>>> 1.31733 - 0.88
+0.4373299999999999
+```
+
+2020-05-29 14:50:03
+python testing [python/tdd/testing.md](file:///Users/kvogel/Projects/python/tdd/testing.md)
+  TL;DNR: use `unittest` for this tech test, and `pytest` IRL
+
 
 
 [Episode #28: Using Pylance to Write Better Python Inside of Visual Studio Code – The Real Python Podcast ](https://realpython.com/podcasts/rpp/28/?utm_campaign=2020-09-25)
@@ -108,10 +161,15 @@ quincy larson freecodecamp tuts
 
 PyCoder's Weekly <admin@pycoders.com> - bloody amazing!
 
+`six.text_type`
+>Type for representing (Unicode) textual data. This is `unicode()` in Python 2 and `str` in Python 3.
+[six](/../../pl/python/misc/six.md)
+
+
 [Raymond Hettinger, Keynote on Concurrency, PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk)
 and the other stuff from him
-
 [The Mental Game of Python - Raymond Hettinger](https://www.youtube.com/watch?v=UANN2Eu6ZnM)
+
 
 [Python in the Movies, Reading Crazy Excel Files, Exploring Fractals, and More - chrisjbird@gmail.com - Gmail ](https://mail.google.com/mail/u/0/?ui=2&view=btop&ver=1cid59g061n3t&search=inbox&th=%23thread-f%3A1681101190819999726&cvid=4)
 
@@ -161,11 +219,16 @@ print(author)
 """
 ```
 
-linkify:
-[cls python](https://www.google.com/search?q=cls+python&gs_lcp=CgZwc3ktYWIQARgCMgQIIxAnMggIABCxAxCRAjIFCAAQkQIyCggAELEDEIMBEEMyBAgAEEMyBwgAELEDEEMyBQgAELEDMgcIABAUEIcCMggIABCxAxCDATIICC4QxwEQrwE6BwgjELADECc6CQgAELADEA0QHlCdVlidVmCLb2gAcAB4AIABrgGIAaMCkgEDMC4ymAEAoAEBqgEHZ3dzLXdpesABAQ&sclient=psy-ab)
+### cls, staticmethod and classmethod
+
+[cls python](https://www.google.com/search?q=cls+python)
 [python - Difference between staticmethod and classmethod](https://stackoverflow.com/questions/136097/difference-between-staticmethod-and-classmethod)
 
 
+[python sentinel](https://www.google.com/search?q=python+sentinel&ie=UTF-8)
+[What is the point of "sentinel object" pattern in Python](https://stackoverflow.com/questions/61105825/what-is-the-point-of-sentinel-object-pattern-in-python)
+[The Sentinel Object Pattern ](https://python-patterns.guide/python/sentinel-object/)
+[Model field reference  Django documentation  Django ](https://docs.djangoproject.com/en/dev/ref/models/fields/#null)
 ```
 PS C:\Users\cbird> wsl
 20/08/14 7:34:52 kvogel-elitebook:~
@@ -182,10 +245,11 @@ bpython version 0.17.1 on top of Python 2.7.15rc1 /usr/bin/python
 >>>
 ```
 
-[python sentinel](https://www.google.com/search?q=python+sentinel&ie=UTF-8)
-[What is the point of "sentinel object" pattern in Python](https://stackoverflow.com/questions/61105825/what-is-the-point-of-sentinel-object-pattern-in-python)
-[The Sentinel Object Pattern ](https://python-patterns.guide/python/sentinel-object/)
-[Model field reference  Django documentation  Django ](https://docs.djangoproject.com/en/dev/ref/models/fields/#null)
+>I have a rule of thumb, no logic in loops, it is one method's responsibility to iterate, and an other method's to execute the logic.
+
+[module - What does a . in an import statement in Python mean?](https://stackoverflow.com/questions/7279810/what-does-a-in-an-import-statement-in-python-mean)
+
+
 
 a generator is a routine that can be used to control the iteration behaviour of a loop. All generators are also iterators.
 A generator is very similar to a function that returns an array, in that a generator has parameters, can be called, and generates a sequence of values. However, instead of building an array containing all the values and returning them all at once, a generator yields the values one at a time, which requires less memory and allows the caller to get started processing the first few values immediately.
@@ -284,6 +348,11 @@ Python 3.7.3 | packaged by conda-forge | (default, Jul  1 2019, 14:38:56)
 '/Users/kvogel/Projects-work/skoot/api/microservices/talon_one/coupons/venv'
 ```
 
+```py
+    Groupable = collections.namedtuple('Groupable', ('rdr_entry', 'closer',
+                                                     'sender', 'row'))
+```
+?
 
 [python __all__](https://www.google.com/search?q=python+__all__&ie=UTF-8)
 [syntax - Can someone explain __all__ in Python?](https://stackoverflow.com/questions/44834/can-someone-explain-all-in-python)
