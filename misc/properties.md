@@ -8,15 +8,18 @@
 [python - What's the pythonic way to use getters and setters?](https://stackoverflow.com/questions/2627002/whats-the-pythonic-way-to-use-getters-and-setters)
 
 
-Properties can be considered the "Pythonic" way of working with attributes because:
+[The @property Decorator in Python: Its Use Cases, Advantages, and Syntax ](https://www.freecodecamp.org/news/python-property-decorator/)
 
-* The syntax used to define properties is very *concise and readable*.
-* You can access instance attributes exactly as if they were public attributes while using the "magic" of intermediaries (getters and setters) to *validate* new values and to *avoid accessing or modifying the data directly*.
-* By using @property, you can *reuse the name* of a property to avoid creating new names for the getters, setters, and deleters.
+[python - What does Django's @property do?](https://stackoverflow.com/questions/58558989/what-does-djangos-property-do)
+>It is something from Python; it is not Django-specific
+
+>Properties can be considered the "Pythonic" way of working with attributes because:
+>* The syntax used to define properties is very *concise and readable*.
+>* You can access *instance attributes* exactly as if they were *public attributes* while using the "magic" of *intermediaries (getters and setters)* to *validate* new values and to *avoid accessing or modifying the data directly*.
+>* By using `@property`, you can *reuse the name* of a property to avoid creating new names for the getters, setters, and deleters.
   ?
 
-*A decorator function is basically a function that adds new functionality to a function that is passed as argument*.
-It lets us add new functionality to an existing function without modifying it.
+>*A decorator function is basically a function that adds new functionality to a function that is passed as argument*. It lets us *add new functionality* to an existing function *without modifying it*.
 
 [The @property Decorator in Python: Its Use Cases, Advantages, and Syntax ](https://www.freecodecamp.org/news/python-property-decorator/)
 
