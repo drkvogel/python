@@ -438,3 +438,200 @@ environment/pipenv.md
 
 [Distributing python packages protected with Cython  by Artem Vasilyev  The Startup  Medium ](https://medium.com/swlh/distributing-python-packages-protected-with-cython-40fc29d84caf)
 
+
+[Value object in Python](https://www.google.com/search?q=Value+object+in+Python&biw=1280&bih=616)
+[keleshev/value: Value object pattern implementation ](https://github.com/keleshev/value)
+[Python DDD - Value Object idea. Immutable attributes, methods, structural equality. ](https://gist.github.com/wuub/b455b2c9945b7003958fa25ebe0d71e9)
+[Implementation of Value Object Pattern for Python : Python ](https://www.reddit.com/r/Python/comments/1ajxbo/implementation_of_value_object_pattern_for_python/)
+[DDD Value Object Python](https://www.google.com/search?q=DDD+Value+Object+Python&biw=1280&bih=616&dpr=1.5)
+[Python DDD - Value Object idea. Immutable attributes, methods, structural equality. ](https://gist.github.com/tauzen/ea97bbe8ea4e558b4eda84ba0cac527f)
+
+[namedtuple](https://www.google.com/search?q=namedtuple&ie=UTF-8)
+[Python Namedtuple - Working and Benefits of Namedtuple in Python - DataFlair ](https://data-flair.training/blogs/python-namedtuple/)
+[Writing Clean Python With Namedtuples – dbader.org ](https://dbader.org/blog/writing-clean-python-with-namedtuples)
+[namedtuple - Python Module of the Week ](https://pymotw.com/2/collections/namedtuple.html)
+[What are "named tuples" in Python?](https://stackoverflow.com/questions/2970608/what-are-named-tuples-in-python)
+[performance - What is the fastest (to access) struct-like object in Python?](https://stackoverflow.com/questions/2646157/what-is-the-fastest-to-access-struct-like-object-in-python)
+
+[timeit](https://www.google.com/search?q=timeit&ie=UTF-8)
+[timeit — Measure execution time of small code snippets — Python 3.9.4 documentation ](https://docs.python.org/3/library/timeit.html)
+[Python Timeit() with Examples ](https://www.guru99.com/timeit-python-examples.html)
+[PEP 8 -- Style Guide for Python Code  Python.org ](https://www.python.org/dev/peps/pep-0008/)
+
+[python repl edit line](https://www.google.com/search?q=python+repl+edit+line)
+[2. Using the Python Interpreter — Python 3.9.4 documentation ](https://docs.python.org/3/tutorial/interpreter.html)
+
+[Edit previous lines of code in Python? : learnpython ](https://www.reddit.com/r/learnpython/comments/83nm54/edit_previous_lines_of_code_in_python/)
+IDLE, Geany, Notepad++, PyCharm; Spyder, which comes with Anaconda; Thonny; Pyzo; IPython Notebooks 
+>really nice trifecta of books: "python crash course", "automate the boring stuff with python" and "python playground"
+
+[linux - Python command line: editing mistake on previous line?](https://stackoverflow.com/questions/6959620/python-command-line-editing-mistake-on-previous-line)
+>You can't do such a thing in the original python interpreter, however, if you use the last version of IPython, it provides a lightweight GUI (looks like a simple shell, but is a GUI in fact) which features multi-line editing, syntax highlighting and a bunch of other things. To use IPython GUI, run it with the ipython qtconsole command.
+
+[Python reimport module after change](https://www.google.com/search?q=Python+reimport+module+after+change&biw=1280&bih=616&dpr=1.5)
+
+[jupyter notebook](https://www.google.com/search?q=jupyter+notebook&ie=UTF-8)
+[Project Jupyter  Home ](https://jupyter.org/)
+[Project Jupyter  Try Jupyter ](https://jupyter.org/try)
+[Project Jupyter  Installing the Jupyter Software ](https://jupyter.org/install)
+[Jupyter Notebook: An Introduction – Real Python ](https://realpython.com/jupyter-notebook-introduction/)
+[Why Jupyter is data scientists’ computational notebook of choice ](https://www.nature.com/articles/d41586-018-07196-1)
+
+
+[Why Some Senior Developers Don’t Like Python  by Mohammed Ayar  Better Programming ](https://betterprogramming.pub/why-some-senior-developers-dont-like-python-974c5361fff2) - another dumb article on Medium...
+```
+2021-04-05 20:59:23 kvogel-elitebook:~
+❯ bpython
+bpython version 0.18 on top of Python 3.8.5 /usr/bin/python3
+```
+```py
+>>> max_number = 12
+>>> my_list = []
+>>> for i in range(1, 5):
+...     max_number = 2 * (max_number * i)
+...     my_list.append(max_number)
+...
+...
+>>> my_list
+[24, 96, 576, 4608]
+```
+```
+2021-04-05 21:01:20 kvogel-elitebook:~
+❯ bpython
+bpython version 0.18 on top of Python 3.8.5 /usr/bin/python3
+```
+```py
+>>> max_number = 12
+>>> my_list = []
+>>> for i in range(1, 5):
+...     max_numbr = 2 * (max_number * i)
+...     my_list.append(max_number)
+...
+...
+>>> my_list
+[12, 12, 12, 12]
+>>>
+```
+
+
+>`pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
+
+`pass` does nothing but doesn't stop execution - use `return` instead
+
+
+
+```
+2021-04-06 02:57:48 kvogel-elitebook:~/.vscode-server/bin/2b9aebd5354a3629c3aba0a5f5df49f43d6689f8/out
+❯ bpython
+bpython version 0.18 on top of Python 3.8.5 /usr/bin/python3
+```
+```py
+>>> import sys
+>>> sys.version
+'3.8.5 (default, Jul 28 2020, 12:59:40) \n[GCC 9.3.0]'
+>>> sys.version_info
+sys.version_info(major=3, minor=8, micro=5, releaselevel='final', serial=0)
+>>>
+```
+
+Installed [pip for Python 2](/learn/python/notes/pip-py2.md)
+
+
+```py
+        if isinstance(doc_entry, (list, tuple)):
+            raise ValueError(doc_entry)
+```
+>The `isinstance()` function returns `True` if the specified object is of the specified type, otherwise `False`.
+>If the type parameter is a tuple, this function will return True if the object is one of the types in the tuple.
+
+
+```py
+>>> x = 1
+>>> isinstance(x, int)
+True
+>>> y = []
+>>> isinstance(y, int)
+False
+>>> not isinstance(y, int)
+True
+>>> not isinstance(x, (list, tuple))
+True
+>>> not isinstance(y, (list, tuple))
+False
+```
+
+
+[Python's str.isdigit vs. str.isnumeric — Reuven Lerner ](https://lerner.co.il/2019/02/17/pythons-str-isdigit-vs-str-isnumeric/)
+[Is It Time To Stop Using IsNumeric()? - Simple Talk ](https://www.red-gate.com/simple-talk/blogs/time-stop-using-isnumeric/)
+[string - What's the difference between str.isdigit, isnumeric and isdecimal in python?](https://stackoverflow.com/questions/44891070/whats-the-difference-between-str-isdigit-isnumeric-and-isdecimal-in-python)
+[Built-in Types — Python 3.9.4 documentation ](https://docs.python.org/3/library/stdtypes.html)
+
+
+[python library to find email address](https://www.google.com/search?q=python+library+to+find+email+address&ie=UTF-8)
+[python - How to check for valid email address?](https://stackoverflow.com/questions/8022530/how-to-check-for-valid-email-address)
+[regex - How to validate an email address using a regular expression?](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)
+[re — Regular expression operations — Python 3.9.4 documentation ](https://docs.python.org/3/library/re.html#re.fullmatch)
+[python - How to check for valid email address?](https://stackoverflow.com/questions/8022530/how-to-check-for-valid-email-address/28982264#28982264)
+[python library to find email address](https://www.google.com/search?q=python+library+to+find+email+address&ie=UTF-8)
+[python - How to check for valid email address?](https://stackoverflow.com/questions/8022530/how-to-check-for-valid-email-address)
+[regex - How to validate an email address using a regular expression?](https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)
+[re — Regular expression operations — Python 3.9.4 documentation ](https://docs.python.org/3/library/re.html#re.fullmatch)
+[python - How to check for valid email address?](https://stackoverflow.com/questions/8022530/how-to-check-for-valid-email-address/28982264#28982264)
+[python truthy](https://www.google.com/search?q=python+truthy&ie=UTF-8)
+[Truthy and Falsy Values in Python: A Detailed Introduction ](https://www.freecodecamp.org/news/truthy-and-falsy-values-in-python/)
+[python - What is Truthy and Falsy? How is it different from True and False?](https://stackoverflow.com/questions/39983695/what-is-truthy-and-falsy-how-is-it-different-from-true-and-false)
+[unittest — Unit testing framework — Python 3.9.4 documentation ](https://docs.python.org/3/library/unittest.html)
+[django - What is actually assertEquals in Python?](https://stackoverflow.com/questions/17920625/what-is-actually-assertequals-in-python)
+[django.test.TestCase](https://www.google.com/search?q=django.test.TestCase&ie=UTF-8)
+[Django Tutorial Part 10: Testing a Django web application - Learn web development  MDN ](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
+[Testing tools  Django documentation  Django ](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#testcase)
+[Testing in Django (Part 1) – Best Practices and Examples – Real Python ](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/)
+    Extensions (chrome://extensions/)
+
+[assertnotraises context manager](https://www.google.com/search?q=assertnotraises+context+manager&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEA0yCAgAEA0QBRAeOgcIABBHELADOgQIABAKOgcIIRAKEKABOgQIIRAVUL6rWVjFwllgncRZaAFwAngAgAHiAYgBrA-SAQU3LjkuMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&uact=5)
+[unit testing - Python unittest - opposite of assertRaises?](https://stackoverflow.com/questions/4319825/python-unittest-opposite-of-assertraises)
+[unit testing - Using a context manager with Python assertRaises](https://stackoverflow.com/questions/8215653/using-a-context-manager-with-python-assertraises)
+
+### FP in Python
+
+[python functional programming](https://www.google.com/search?q=python+functional+programming&ie=UTF-8)
+[Functional Programming HOWTO — Python 3.9.4 documentation ](https://docs.python.org/3/howto/functional.html)
+[Functional Programming in Python: When and How to Use It – Real Python ](https://realpython.com/python-functional-programming/)
+[Functional Programming in Python – Real Python ](https://realpython.com/courses/functional-programming-python/)
+[Best Practices for Using Functional Programming in Python - Kite Blog ](https://www.kite.com/blog/python/functional-programming/)
+[functional programming - What is 'Currying'?](https://stackoverflow.com/questions/36314/what-is-currying)
+[The Next Level of Functional Programming in Python  by Dimitris Poulopoulos  Towards Data Science ](https://towardsdatascience.com/the-next-level-of-functional-programming-in-python-bc534b9bdce1)
+
+[python immutable library](https://www.google.com/search?q=python+immutable+library)
+[Functional programming in Python: Immutable data structures  Opensource.com ](https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures)
+[immutable · PyPI ](https://pypi.org/project/immutable/)
+[Immutable data structures in Python  Technology  The Guardian ](https://www.theguardian.com/info/developer-blog/2014/oct/21/immutable-data-structures-in-python)
+[How technology unlocked the secretive power of ‘Queen’s consent’   The Guardian ](https://www.theguardian.com/info/2021/feb/23/how-technology-unlocked-the-secretive-power-of-queens-consent)
+[immutable-js/immutable-js: Immutable persistent data collections for Javascript which increase efficiency and simplicity. ](https://github.com/immutable-js/immutable-js)
+[Why isn't there more demand for immutable data structures in the Python community? : Python ](https://www.reddit.com/r/Python/comments/9earvg/why_isnt_there_more_demand_for_immutable_data/)
+[How to make an immutable object in Python?](https://stackoverflow.com/questions/4828080/how-to-make-an-immutable-object-in-python)
+[__slots__](https://www.google.com/search?q=__slots__&ie=UTF-8)
+[10. __slots__ Magic — Python Tips 0.1 documentation ](https://book.pythontips.com/en/latest/__slots__magic.html)
+[python - Usage of __slots__?](https://stackoverflow.com/questions/472000/usage-of-slots)
+[Understand __slots__ in Python. A simple way to improve your Python…  by Xiaoxu Gao  Towards Data Science ](https://towardsdatascience.com/understand-slots-in-python-e3081ef5196d)
+[A quick dive into Python’s “__slots__”  by Stephen Jayakar  Noteworthy - The Journal Blog ](https://blog.usejournal.com/a-quick-dive-into-pythons-slots-72cdc2d334e)
+[Python (and Python C API): __new__ versus __init__](https://stackoverflow.com/questions/4859129/python-and-python-c-api-new-versus-init)
+
+
+
+?
+
+Hi Devs, I am currently writing some custom Django commands for data updation, my workflow is like
+Fetch data from PostgreSQL.
+Call Elasticsearch for searching based on the data fetched from PostgreSQL.
+Query PostgreSQL and do an upsert behavior.
+
+I am using pandas data frame to hold my data during processing.
+The host we are using to run this jobs has a CPython interpreter as given by `platform.python_implementation()`
+
+I want to confirm whether multithreading would be a better choice here, given the fact that GIL is the biggest blocker(I agree it has to be there) for the same in CPython interpreters.
+
+In case further information is required do let me know. Thanks onlinejudge95
+
+--
+
