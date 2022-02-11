@@ -45,9 +45,6 @@ History (chrome://history/?q=snippets)
 [10 Python Tips and “Tricks” You Have to Know  Better Programming ](https://betterprogramming.pub/10-useful-python-snippets-to-code-like-a-pro-e3d9a34e6145)
 [model view controller - What is a Data Transfer Object (DTO)?](https://stackoverflow.com/questions/1051182/what-is-a-data-transfer-object-dto#:~:text=A%20Data%20Transfer%20Object%20is,itself%20and%20the%20UI%20layer.)
 [P of EAA: Data Transfer Object ](https://martinfowler.com/eaaCatalog/dataTransferObject.html)
-[P of EAA ](https://martinfowler.com/books/eaa.html)
-Patterns of Enterprise Application Architecture
-[DuplexBook ](https://martinfowler.com/bliki/DuplexBook.html)
 [LocalDTO ](https://martinfowler.com/bliki/LocalDTO.html)
 
 [Data transfer object Spatie](https://www.google.com/search?q=Data+transfer+object+Spatie&biw=1280&bih=616)
@@ -56,6 +53,50 @@ Patterns of Enterprise Application Architecture
 [Data Transfer Objects in Python](https://www.google.com/search?q=Data+Transfer+Objects+in+Python&ie=UTF-8)
 [Data Transfer Object](https://www.google.com/search?q=Data+Transfer+Object)
 
+[P of EAA ](https://martinfowler.com/books/eaa.html)
+Patterns of Enterprise Application Architecture
+[DuplexBook ](https://martinfowler.com/bliki/DuplexBook.html)
 [Websites & webapplications in Laravel  Spatie ](https://spatie.be/)
-
 [Articles I write ](https://romanisthere.github.io/posts/)
+
+[dto python](https://www.google.com/search?qie=UTF-8)
+[Python: Quick and dirty datatypes (DTO)](https://stackoverflow.com/questions/13933419/python-quick-and-dirty-datatypes-dto)
+[def __hash__](https://www.google.com/search?qie=UTF-8)
+[Python hash() ](https://www.programiz.com/python-programming/methods/built-in/hash)
+[What is the purpose of the __hash__ method of Python objects? ](https://www.quora.com/What-is-the-purpose-of-the-__hash__-method-of-Python-objects)
+[collections — Container datatypes — Python 3.9.10 documentation ](https://docs.python.org/3.9/library/collections.html?highlight=namedtuple#collections.namedtuple)
+[dataclasses — Data Classes — Python 3.9.10 documentation ](https://docs.python.org/3.9/library/dataclasses.html#dataclasses.dataclass)
+[Data Classes in Python 3.7+ (Guide) – Real Python ](https://realpython.com/python-data-classes/)
+[dataclasses — Data Classes — Python 3.10.2 documentation ](https://docs.python.org/3/library/dataclasses.html)
+[ironpython - Python: Data Transfer Object](https://stackoverflow.com/questions/10920508/python-data-transfer-object)
+[java - Why are data transfer objects (DTOs) an anti-pattern?](https://stackoverflow.com/questions/1440952/why-are-data-transfer-objects-dtos-an-anti-pattern)
+[SiavashMT/Python-DTO ](https://github.com/SiavashMT/Python-DTO)
+[DTOs in Python : Python ](https://www.reddit.com/r/Python/comments/ecw5gq/dtos_in_python/)
+[python dao vs dto](https://www.google.com/search?qie=UTF-8)
+[What is the difference between DTO and DAO? ](https://www.quora.com/What-is-the-difference-between-DTO-and-DAO)
+[What is the difference between POJO and DTO? ](https://www.quora.com/What-is-the-difference-between-POJO-and-DTO)
+[What is the difference between POJO and DAO? ](https://www.quora.com/What-is-the-difference-between-POJO-and-DAO)
+[DAO vs DTO vs repository](https://www.google.com/search?qsadpr=1.41)
+[hibernate - What is the difference between DAO and Repository patterns?](https://stackoverflow.com/questions/8550124/what-is-the-difference-between-dao-and-repository-patterns#:~:text=A%20DAO%20allows%20for%20a,to%20restore%20a%20business%20object.)
+[DAO vs Repository](https://www.google.com/search?qsadpr=1.41)
+[python nametuple vs dataclasses](https://www.google.com/search?qie=UTF-8)
+[python - Data Classes vs typing.NamedTuple primary use cases](https://stackoverflow.com/questions/51671699/data-classes-vs-typing-namedtuple-primary-use-cases)
+[python - What are data classes and how are they different from common classes?](https://stackoverflow.com/questions/47955263/what-are-data-classes-and-how-are-they-different-from-common-classes)
+
+
+DTO
+>pure data structure, exist only to transfer data between objects
+>A REST API DTO will often have @JsonProperty annotations. A database DTO will often have @Entity annotations (in Java)
+>DTO should only contain private fields for your data, getters, setters and constructors. It is not recommended to add business logic methods to such classes, but it is OK to add some util methods.
+
+>DAO is an abbreviation for Data Access Object, so it should encapsulate the logic for retrieving, saving and updating data in your data storage (a database, a file-system, whatever).
+>a data access object (DAO) is an object that provides an abstract interface to some type of database or other persistence mechanism. By mapping application calls to the persistence layer, the DAO provides some specific data operations without exposing details of the database.
+
+[Python: Quick and dirty datatypes (DTO)](https://stackoverflow.com/questions/13933419/python-quick-and-dirty-datatypes-dto)
+>if using Python 3.7 you can use Data Classes; Data Classes can be thought of as "mutable namedtuples with defaults"
+https://docs.python.org/3/library/dataclasses.html
+https://www.python.org/dev/peps/pep-0557/
+```py
+Pruefer.__new__.func_defaults=(1,float('inf'),"")
+```
+???
