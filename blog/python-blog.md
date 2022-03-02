@@ -73,7 +73,6 @@ that really good Python site: [PyCoder’s Weekly](https://pycoders.com/issues/4
 
 [8 Advanced Python Tricks Used by Seasoned Programmers ](https://towardsdatascience.com/8-advanced-python-tricks-used-by-seasoned-programmers-757804975802)
 
-[__slots__](/misc/__slots__.md)
 
 [Why Does Python Recommend the Snake-Case Nomenclature?  Pawan Jain in Towards Data Science - chrisjbird@gmail.com - Gmail ](https://mail.google.com/mail/u/0/#inbox/FMfcgxwJXBzMGmDLXHdQQdBlnCnkfDnD)
 
@@ -81,7 +80,6 @@ that really good Python site: [PyCoder’s Weekly](https://pycoders.com/issues/4
 
 [Python Job Board – Python Jobs HQ ](https://www.pythonjobshq.com/?__s=5r8stehqp1fcvezhd5ng)
 [Grow Your Python Portfolio With 13 Intermediate Project Ideas – Real Python ](https://realpython.com/courses/intermediate-project-ideas/)
-
 
 [Monty Python: The Lost World of Roiurama / Six More Minutes of Monty Python's Flying Circus](http://www.montypython.net/scripts/lostworld.php)
 [Monty Python - The Lost World of Roiurama - video dailymotion ](https://www.dailymotion.com/video/x2rpx6n)
@@ -98,7 +96,7 @@ that really good Python site: [PyCoder’s Weekly](https://pycoders.com/issues/4
 Python-3.8.6-src.tgz: gzip compressed data, last modified: Wed Sep 23 13:54:28 2020, max compression, from Unix, original size 87797760
 ❯ tar tzf Python-3.8.6-src.tgz| less
 ❯ tar xzf Python-3.8.6-src.tgz
-(venv) 20/10/5 14:51:10 kvogel-macbook:~/Projects/python/ ±(master) ✗ 
+(venv) 20/10/5 14:51:10 kvogel-macbook:~/Projects/python/ ±(master) ✗
 ❯ mv ~/Downloads/Python-3.8.6/ src
 ```
 
@@ -107,7 +105,7 @@ Python-3.8.6-src.tgz: gzip compressed data, last modified: Wed Sep 23 13:54:28 2
 `!s` - convert the value to a string using str().
 
 [str() vs repr() in Python - GeeksforGeeks ](https://www.geeksforgeeks.org/str-vs-repr-in-python/)
->`str()` is used for creating output for end user while `repr()` is mainly used for debugging and development. repr’s goal is to be unambiguous and str’s is to be readable. 
+>`str()` is used for creating output for end user while `repr()` is mainly used for debugging and development. repr’s goal is to be unambiguous and str’s is to be readable.
 
 [New tutorials from Flavio! - chrisjbird@gmail.com - Gmail ](https://mail.google.com/mail/u/0/#inbox/FMfcgxwKkbrQKfNknVffDdqgbHxJwlSF)
 [Python Introspection Tutorial ](https://flaviocopes.com/python-introspection/)
@@ -166,8 +164,7 @@ PyCoder's Weekly <admin@pycoders.com> - bloody amazing!
 [six](/../../pl/python/misc/six.md)
 
 
-[Raymond Hettinger, Keynote on Concurrency, PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk)
-and the other stuff from him
+[Raymond Hettinger, Keynote on Concurrency, PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk) and the other stuff from him
 [The Mental Game of Python - Raymond Hettinger](https://www.youtube.com/watch?v=UANN2Eu6ZnM)
 
 
@@ -249,11 +246,8 @@ bpython version 0.17.1 on top of Python 2.7.15rc1 /usr/bin/python
 
 [module - What does a . in an import statement in Python mean?](https://stackoverflow.com/questions/7279810/what-does-a-in-an-import-statement-in-python-mean)
 
-
-
-a generator is a routine that can be used to control the iteration behaviour of a loop. All generators are also iterators.
-A generator is very similar to a function that returns an array, in that a generator has parameters, can be called, and generates a sequence of values. However, instead of building an array containing all the values and returning them all at once, a generator yields the values one at a time, which requires less memory and allows the caller to get started processing the first few values immediately.
-In short, a *generator looks like a function but behaves like an iterator*.
+>a generator is a routine that can be used to control the iteration behaviour of a loop. All generators are also iterators.
+>A generator is very similar to a function that returns an array, in that a generator has parameters, can be called, and generates a sequence of values. However, instead of building an array containing all the values and returning them all at once, a generator yields the values one at a time, which requires less memory and allows the caller to get started processing the first few values immediately. In short, a *generator looks like a function but behaves like an iterator*.
 
 learn-django repo...
 
@@ -326,7 +320,7 @@ learn-django repo...
 
 `bpython` uses anaconda! why??
 ```
-(venv) 20/07/15 21:37:40 kvogel-macbook-2018:~/Projects-work/skoot/api/microservices ±(master) ✗ 
+(venv) 20/07/15 21:37:40 kvogel-macbook-2018:~/Projects-work/skoot/api/microservices ±(master) ✗
 ❯ bpython
 bpython version 0.18 on top of Python 3.7.3 /usr/local/anaconda3/bin/python
 ```
@@ -337,9 +331,9 @@ bpython version 0.18 on top of Python 3.7.3 /usr/local/anaconda3/bin/python
 ```
 
 ```
-(venv) 20/07/15 21:50:50 kvogel-macbook-2018:~/Projects-work/skoot/api/microservices ±(master) ✗ 
+(venv) 20/07/15 21:50:50 kvogel-macbook-2018:~/Projects-work/skoot/api/microservices ±(master) ✗
 ❯ python
-Python 3.7.3 | packaged by conda-forge | (default, Jul  1 2019, 14:38:56) 
+Python 3.7.3 | packaged by conda-forge | (default, Jul  1 2019, 14:38:56)
 [Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
 ```
 ```py
@@ -354,34 +348,17 @@ Python 3.7.3 | packaged by conda-forge | (default, Jul  1 2019, 14:38:56)
 ```
 ?
 
-[python __all__](https://www.google.com/search?q=python+__all__&ie=UTF-8)
-[syntax - Can someone explain __all__ in Python?](https://stackoverflow.com/questions/44834/can-someone-explain-all-in-python)
-[Why should I use __all__ in __init__ of python package?](https://stackoverflow.com/questions/30888683/why-should-i-use-all-in-init-of-python-package)
 
-[python from dot import](https://www.google.com/search?q=python+from+dot+import)
-[python - `from ... import` vs `import .`](https://stackoverflow.com/questions/9439480/from-import-vs-import)
-[Absolute vs Relative Imports in Python – Real Python ](https://realpython.com/absolute-vs-relative-python-imports/)
-[Python "from dotpackage import ..." syntax](https://stackoverflow.com/questions/22511792/python-from-dotpackage-import-syntax)
-[module - What does a . in an import statement in Python mean?](https://stackoverflow.com/questions/7279810/what-does-a-in-an-import-statement-in-python-mean)
-[6. Modules — Python 3.8.4 documentation ](https://docs.python.org/3/tutorial/modules.html)
-[PEP 328 -- Imports: Multi-Line and Absolute/Relative  Python.org ](https://www.python.org/dev/peps/pep-0328/)
-[Python-Dev PEP 328 -- relative and multi-line import ](https://mail.python.org/pipermail/python-dev/2004-March/043739.html)
-[python - Importing with dot notation](https://stackoverflow.com/questions/45593981/importing-with-dot-notation)
+misc/relative-imports.md
+misc/circular-import.md
+
+[__all__](/misc/all.md)
+[__slots__](/misc/__slots__.md)
 
 
-[vscode python venv](https://www.google.com/search?q=vscode+python+venv&ie=UTF-8)
-[VS Code Doesn't Recognize Python Virtual Environment](https://stackoverflow.com/questions/56652968/vs-code-doesnt-recognize-python-virtual-environment)
-[python - Auto activate virtual environment in Visual Studio Code](https://stackoverflow.com/questions/58433333/auto-activate-virtual-environment-in-visual-studio-code)
+environment/virtualenv-venv.md
 
-[How to setup virtual environment for Python in VS Code?](https://stackoverflow.com/questions/54106071/how-to-setup-virtual-environment-for-python-in-vs-code)
->-I have been using vs code for a while now and found an another way to show virtual environments in vs code.
->Go to the parent folder in which venv is there through command prompt.
->Type `code .` and Enter. [Working on both windows and linux for me.]
->That should also show the virtual environments present in that folder.
-
-So what can super() do for you in single inheritance?
-
-Like in other object-oriented languages, it allows you to call methods of the superclass in your subclass. The primary use case of this is to extend the functionality of the inherited method.
+>So what can `super()` do for you in single inheritance? Like in other object-oriented languages, it allows you to call methods of the superclass in your subclass. The primary use case of this is to extend the functionality of the inherited method.
 
 [python super](https://www.google.com/search?q=python+super&ie=UTF-8)
 [Supercharge Your Classes With Python super() – Real Python ](https://realpython.com/python-super/)
@@ -415,13 +392,12 @@ python import dot notation
 [Django Caching - It's Easy if you do it in the Smart Way! - DataFlair ](https://data-flair.training/blogs/django-caching/)
 
 [Caching in Django With Redis – Real Python ](https://realpython.com/caching-in-django-with-redis/)
->Redis is an in-memory data structure store that can be used as a caching engine. Since it keeps data in RAM, Redis can deliver it very quickly. 
+>Redis is an in-memory data structure store that can be used as a caching engine. Since it keeps data in RAM, Redis can deliver it very quickly.
 >Memcached is another popular in-memory caching system, but many people agree that Redis is superior to Memcached in most circumstances. Personally, we like how easy it is to set up and use Redis for other purposes such as Redis Queue.
 
 redis grok...
 django caching grok...
 tdd, etc grok...
-
 
 >Python is popular in fintech startups; higher up it's C#, Java, Golang - [Jack Barry - Fintech Specialist](https://mail.google.com/mail/u/0/#inbox/FMfcgxwLsJvLCLKzzGMzwCfCbWSQGcxC)
 
@@ -438,35 +414,16 @@ environment/pipenv.md
 
 [Distributing python packages protected with Cython  by Artem Vasilyev  The Startup  Medium ](https://medium.com/swlh/distributing-python-packages-protected-with-cython-40fc29d84caf)
 
+misc/value-object.md
 
-[Value object in Python](https://www.google.com/search?q=Value+object+in+Python&biw=1280&bih=616)
-[keleshev/value: Value object pattern implementation ](https://github.com/keleshev/value)
-[Python DDD - Value Object idea. Immutable attributes, methods, structural equality. ](https://gist.github.com/wuub/b455b2c9945b7003958fa25ebe0d71e9)
-[Implementation of Value Object Pattern for Python : Python ](https://www.reddit.com/r/Python/comments/1ajxbo/implementation_of_value_object_pattern_for_python/)
-[DDD Value Object Python](https://www.google.com/search?q=DDD+Value+Object+Python&biw=1280&bih=616&dpr=1.5)
-[Python DDD - Value Object idea. Immutable attributes, methods, structural equality. ](https://gist.github.com/tauzen/ea97bbe8ea4e558b4eda84ba0cac527f)
-
-[namedtuple](https://www.google.com/search?q=namedtuple&ie=UTF-8)
-[Python Namedtuple - Working and Benefits of Namedtuple in Python - DataFlair ](https://data-flair.training/blogs/python-namedtuple/)
-[Writing Clean Python With Namedtuples – dbader.org ](https://dbader.org/blog/writing-clean-python-with-namedtuples)
-[namedtuple - Python Module of the Week ](https://pymotw.com/2/collections/namedtuple.html)
-[What are "named tuples" in Python?](https://stackoverflow.com/questions/2970608/what-are-named-tuples-in-python)
-[performance - What is the fastest (to access) struct-like object in Python?](https://stackoverflow.com/questions/2646157/what-is-the-fastest-to-access-struct-like-object-in-python)
+misc/namedtuple.md
 
 [timeit](https://www.google.com/search?q=timeit&ie=UTF-8)
 [timeit — Measure execution time of small code snippets — Python 3.9.4 documentation ](https://docs.python.org/3/library/timeit.html)
 [Python Timeit() with Examples ](https://www.guru99.com/timeit-python-examples.html)
 [PEP 8 -- Style Guide for Python Code  Python.org ](https://www.python.org/dev/peps/pep-0008/)
 
-[python repl edit line](https://www.google.com/search?q=python+repl+edit+line)
-[2. Using the Python Interpreter — Python 3.9.4 documentation ](https://docs.python.org/3/tutorial/interpreter.html)
-
-[Edit previous lines of code in Python? : learnpython ](https://www.reddit.com/r/learnpython/comments/83nm54/edit_previous_lines_of_code_in_python/)
-IDLE, Geany, Notepad++, PyCharm; Spyder, which comes with Anaconda; Thonny; Pyzo; IPython Notebooks 
->really nice trifecta of books: "python crash course", "automate the boring stuff with python" and "python playground"
-
-[linux - Python command line: editing mistake on previous line?](https://stackoverflow.com/questions/6959620/python-command-line-editing-mistake-on-previous-line)
->You can't do such a thing in the original python interpreter, however, if you use the last version of IPython, it provides a lightweight GUI (looks like a simple shell, but is a GUI in fact) which features multi-line editing, syntax highlighting and a bunch of other things. To use IPython GUI, run it with the ipython qtconsole command.
+repl/repl.md
 
 [Python reimport module after change](https://www.google.com/search?q=Python+reimport+module+after+change&biw=1280&bih=616&dpr=1.5)
 
@@ -478,7 +435,7 @@ IDLE, Geany, Notepad++, PyCharm; Spyder, which comes with Anaconda; Thonny; Pyzo
 [Why Jupyter is data scientists’ computational notebook of choice ](https://www.nature.com/articles/d41586-018-07196-1)
 
 
-[Why Some Senior Developers Don’t Like Python  by Mohammed Ayar  Better Programming ](https://betterprogramming.pub/why-some-senior-developers-dont-like-python-974c5361fff2) - another dumb article on Medium...
+[Why Some Senior Developers Don’t Like Python](https://betterprogramming.pub/why-some-senior-developers-dont-like-python-974c5361fff2) - another dumb article on Medium...
 ```
 2021-04-05 20:59:23 kvogel-elitebook:~
 ❯ bpython
@@ -515,7 +472,6 @@ bpython version 0.18 on top of Python 3.8.5 /usr/bin/python3
 
 
 >`pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
-
 `pass` does nothing but doesn't stop execution - use `return` instead
 
 
@@ -621,17 +577,85 @@ False
 
 ?
 
-Hi Devs, I am currently writing some custom Django commands for data updation, my workflow is like
-Fetch data from PostgreSQL.
-Call Elasticsearch for searching based on the data fetched from PostgreSQL.
-Query PostgreSQL and do an upsert behavior.
-
-I am using pandas data frame to hold my data during processing.
-The host we are using to run this jobs has a CPython interpreter as given by `platform.python_implementation()`
-
-I want to confirm whether multithreading would be a better choice here, given the fact that GIL is the biggest blocker(I agree it has to be there) for the same in CPython interpreters.
-
-In case further information is required do let me know. Thanks onlinejudge95
+>Hi Devs, I am currently writing some custom Django commands for data updation, my workflow is like Fetch data from PostgreSQL. Call Elasticsearch for searching based on the data fetched from PostgreSQL. Query PostgreSQL and do an upsert behavior. I am using pandas data frame to hold my data during processing. The host we are using to run this jobs has a CPython interpreter as given by `platform.python_implementation()` I want to confirm whether multithreading would be a better choice here, given the fact that GIL is the biggest blocker(I agree it has to be there) for the same in CPython interpreters. In case further information is required do let me know. Thanks onlinejudge95
 
 --
 
+
+[Abandon requirements.txt for managing dependencies in Python immediately | by Vitor Ramalho | Jan, 2022 | Medium ](https://medium.com/@ramalhodevitor/abandon-requirements-txt-for-managing-dependencies-in-python-immediately-50b1c45b824a)
+[pyproject.toml](https://www.google.com/search?qie=UTF-8)
+[The pyproject.toml file | Documentation | Poetry - Python dependency management and packaging made easy ](https://python-poetry.org/docs/pyproject/)
+[Introduction | Documentation | Poetry - Python dependency management and packaging made easy ](https://python-poetry.org/docs/)
+[python - What is pyproject.toml file for?](https://stackoverflow.com/questions/62983756/what-is-pyproject-toml-file-for)
+
+
+[3 Essential Decorators in Python You Need To Know | by Görkem Arslan | Better Programming ](https://betterprogramming.pub/3-essential-decorators-in-python-you-need-to-know-654650bd5c36)
+
+1. Execution Timer Decorator
+2. Logger Decorator
+3. HTML Generator Decorator
+
+[The single most useful Python Decorator @cache | by Felipe Florencio Garcia | Dev today | Medium ](https://medium.com/dev-today/the-single-most-useful-python-decorator-cache-88086c07417e)
+[Build “Factory” and “Utility” In Your Python Classes | by Christopher Tao | Towards Data Science ](https://towardsdatascience.com/build-factory-and-utility-in-your-python-classes-ea39e267ca0a)
+[Creating Abstract Classes in Python | Python in Plain English ](https://python.plainenglish.io/level-up-your-python-code-with-abstract-classes-7f7f6bdcbb5c)
+[4 Anti-Patterns in Python (And How to Avoid Them) | by Raimi Karim | Better Programming ](https://betterprogramming.pub/4-anti-patterns-in-python-a6d5023c8473)
+
+[Stop Using “or” to Check Multiple Conditions in Python | by Görkem Arslan | Dec, 2021 | Better Programming ](https://betterprogramming.pub/stop-using-or-to-check-multiple-conditions-in-python-404d31f2b569)
+>use `in` with `set`s because `in` keyword is advantageous when performance is considered.
+>Fun fact: When you use a constant `set` like in your example, Python creates a `frozenset` constant so it’s only created / allocated once.
+
+```py
+if number in [1, 2, 3, 4]:
+    do_smt()
+
+#  in Django REST Framework (DRF), if we want to test whether a request is a read-only operation
+if request.method in permissions.SAFE_METHODS:
+    # Whether it is a read-only request
+```
+
+use `timeit` module in order to measure execution times
+```py
+x in list   # O(n)
+x in tuple  # O(n)
+x in set    # O(1)
+```
+
+[Requests: HTTP for Humans™ — Requests 2.27.1 documentation ](https://docs.python-requests.org/en/latest/)
+[Contributor’s Guide — Requests 2.27.1 documentation ](https://docs.python-requests.org/en/latest/dev/contributing/)
+[Community Updates — Requests 2.27.1 documentation ](https://docs.python-requests.org/en/latest/community/updates/#release-history)
+[Kenneth Reitz](https://www.google.com/search?q=Kenneth+Reitz&sourceid=chrome&ie=UTF-8)
+
+
+[Python Logo Color Scheme » Blue » SchemeColor.com ](https://www.schemecolor.com/python-logo-colors.php#:~:text=The%20Python%20Logo%20Colors%20with,created%20by%20user%20Keshav%20Naidu.)
+>The Python Logo Colors with Hex & RGB Codes has 5 colors which are Cyan-Blue Azure (#4B8BBE), Lapis Lazuli (#306998), Shandy (#FFE873), Sunglow (#FFD43B) and Granite Gray (#646464).
+Cyan-Blue Azure #4B8BBE
+Lapis Lazuli    #306998
+Shandy          #FFE873
+Sunglow         #FFD43B
+Granite Gray    #646464
+
+
+[Cool New Features in Python 3.10. This is going to be useful to… | by Listy | Geek Culture | Medium ](https://medium.com/geekculture/cool-new-features-in-python-f16a235beb1b)
+1. Parenthesized context managers
+2. Structural pattern matching
+  `match` statement
+  `if` clause to a pattern, known as a “guard”.
+3. Better error messages
+4. New typing features
+
+[How To Abstract SSH Commands in Python | by Tate Galbraith | Better Programming ](https://betterprogramming.pub/how-to-run-ssh-commands-with-python-8111ee8ab405)
+
+[How To Make Your Python Project Easier to Build, Run, and Distribute | by Erik van Baaren | Python Land | Medium ](https://medium.com/pythonland/how-to-make-your-python-project-easier-to-build-run-and-distribute-fb73be2fa30e) - basically, dockerize
+[6 Concepts To Master When Dockerizing Python Applications | by Ng Wai Foong | Better Programming ](https://betterprogramming.pub/6-concepts-to-master-when-dockerizing-python-applications-e5f5a6a87845)
+
+
+reinstalled [bpython](/dev/learn/python/repl/bpython.md)
+```
+❯ bp
+bpython version 0.22.1 on top of Python 3.10.2 /home/kvogel/.asdf/installs/python/3.10.2/bin/python3
+```
+```py
+>>> from datetime import datetime, timedelta
+>>> print(datetime.now() + timedelta(days=60))
+2022-05-01 07:56:16.622902
+```
