@@ -1,13 +1,15 @@
 
 
 
+
+
 ### [FastAPI Tutorial - Building RESTful APIs with Python](https://www.youtube.com/watch?v=GN6ICac3OXY) notes
 
 
 [RESTful](file:///home/kvogel/projects/general/dev/arch/REST/RESTful.md) [HTTP verbs](file:///home/kvogel/projects/general/dev/arch/REST/http-verbs.md)
 
 
-in devtools can look at req, res 
+in devtools can look at req, res
 Thunder Client
 
 ```py
@@ -24,7 +26,7 @@ https://youtu.be/GN6ICac3OXY?t=910
 async await
 
 `models.py`
-Pydantic 
+Pydantic
 
 ```py
 from typing import Optional, List
@@ -75,10 +77,10 @@ https://youtu.be/GN6ICac3OXY?t=1988 Thunder Client
 
 
 ```
-2022-02-25 06:19:12 kvogel@kvogel-surface-ubuntu:~ 
-❯ curl -X MUX -i  http://127.0.0.1:8000    
+2022-02-25 06:19:12 kvogel@kvogel-surface-ubuntu:~
+❯ curl -X MUX -i  http://127.0.0.1:8000
 curl: (52) Empty reply from server
-2022-02-25 06:19:22 kvogel@kvogel-surface-ubuntu:~ 
+2022-02-25 06:19:22 kvogel@kvogel-surface-ubuntu:~
 ```
 
 [SQL (Relational) Databases - FastAPI ](https://fastapi.tiangolo.com/tutorial/sql-databases/)
@@ -152,10 +154,10 @@ https://tiangolo.com
 
 setup python venv
 ```
-2022-02-24 14:40:35 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗ 
+2022-02-24 14:40:35 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗
 ❯ python3 -m venv venv
 ❯ . ./venv/bin/activate
-(venv) 2022-02-24 14:41:06 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗ 
+(venv) 2022-02-24 14:41:06 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗
 ❯ which python
 /home/kvogel/projects/general/dev/learn/python/frameworks/fastapi/demo/venv/bin/python
 ❯ python -V
@@ -163,7 +165,7 @@ Python 3.10.2
 ```
 install FastAPI and other supporting packages:
 ```
-(venv) 2022-02-24 14:41:15 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗ 
+(venv) 2022-02-24 14:41:15 kvogel@kvogel-surface-ubuntu:~/projects/general/dev/learn/python/frameworks/fastapi/demo ±(master) ✗
 ❯ pip install "fastapi[all]"
 ...
 Successfully installed MarkupSafe-2.1.0 anyio-3.5.0 asgiref-3.5.0 certifi-2021.10.8 charset-normalizer-2.0.12 click-8.0.4 dnspython-2.2.0 email-validator-1.1.3 fastapi-0.74.1 h11-0.13.0 httptools-0.2.0 idna-3.3 itsdangerous-2.1.0 jinja2-3.0.3 orjson-3.6.7 pydantic-1.9.0 python-dotenv-0.19.2 python-multipart-0.0.5 pyyaml-5.4.1 requests-2.27.1 six-1.16.0 sniffio-1.2.0 starlette-0.17.1 typing-extensions-4.1.1 ujson-4.3.0 urllib3-1.26.8 uvicorn-0.15.0 uvloop-0.16.0 watchgod-0.7 websockets-10.2
