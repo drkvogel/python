@@ -167,7 +167,6 @@ PyCoder's Weekly <admin@pycoders.com> - bloody amazing!
 [Raymond Hettinger, Keynote on Concurrency, PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk) and the other stuff from him
 [The Mental Game of Python - Raymond Hettinger](https://www.youtube.com/watch?v=UANN2Eu6ZnM)
 
-
 [Python in the Movies, Reading Crazy Excel Files, Exploring Fractals, and More - chrisjbird@gmail.com - Gmail ](https://mail.google.com/mail/u/0/?ui=2&view=btop&ver=1cid59g061n3t&search=inbox&th=%23thread-f%3A1681101190819999726&cvid=4)
 
 [Pandas DataFrame (Python): 10 useful tricks - Level Up Coding ](https://levelup.gitconnected.com/pandas-dataframe-python-10-useful-tricks-b4beae91df3d)
@@ -348,7 +347,6 @@ Python 3.7.3 | packaged by conda-forge | (default, Jul  1 2019, 14:38:56)
 ```
 ?
 
-
 misc/relative-imports.md
 misc/circular-import.md
 
@@ -474,8 +472,6 @@ bpython version 0.18 on top of Python 3.8.5 /usr/bin/python3
 >`pass` is a null operation -- when it is executed, nothing happens. It is useful as a placeholder when a statement is required syntactically, but no code needs to be executed
 `pass` does nothing but doesn't stop execution - use `return` instead
 
-
-
 ```
 2021-04-06 02:57:48 kvogel-elitebook:~/.vscode-server/bin/2b9aebd5354a3629c3aba0a5f5df49f43d6689f8/out
 ❯ bpython
@@ -573,14 +569,11 @@ False
 [A quick dive into Python’s “__slots__”  by Stephen Jayakar  Noteworthy - The Journal Blog ](https://blog.usejournal.com/a-quick-dive-into-pythons-slots-72cdc2d334e)
 [Python (and Python C API): __new__ versus __init__](https://stackoverflow.com/questions/4859129/python-and-python-c-api-new-versus-init)
 
-
-
 ?
 
 >Hi Devs, I am currently writing some custom Django commands for data updation, my workflow is like Fetch data from PostgreSQL. Call Elasticsearch for searching based on the data fetched from PostgreSQL. Query PostgreSQL and do an upsert behavior. I am using pandas data frame to hold my data during processing. The host we are using to run this jobs has a CPython interpreter as given by `platform.python_implementation()` I want to confirm whether multithreading would be a better choice here, given the fact that GIL is the biggest blocker(I agree it has to be there) for the same in CPython interpreters. In case further information is required do let me know. Thanks onlinejudge95
 
 --
-
 
 [Abandon requirements.txt for managing dependencies in Python immediately | by Vitor Ramalho | Jan, 2022 | Medium ](https://medium.com/@ramalhodevitor/abandon-requirements-txt-for-managing-dependencies-in-python-immediately-50b1c45b824a)
 [pyproject.toml](https://www.google.com/search?qie=UTF-8)
@@ -672,47 +665,5 @@ bpython version 0.22.1 on top of Python 3.10.2 /home/kvogel/.asdf/installs/pytho
 
 ### pip freeze diff
 
-[How to compare requirement file and actually installed Python modules?](https://stackoverflow.com/questions/39046603/how-to-compare-requirement-file-and-actually-installed-python-modules)
-[python - Pip freeze vs. pip list](https://stackoverflow.com/questions/18966564/pip-freeze-vs-pip-list)
->i think it is because `pip list` lists everything, and `pip freeze` lists *everything installed by pip*
->The main difference is that the output of `pip freeze` can be dumped into a `requirements.txt` file and used later to re-construct the "frozen" environment.
-```
-pip freeze | diff requirements.txt -
-```
-`diffreqs` "script" should be a (personal) alias, or maybe not even that so I can remember it...
-```
-(venv) 2022-03-07 17:15:54 kvogel@kvogel-surface-ubuntu:~/projects/general/work/uhs/v3/fastapi ±(main) ✗
-❯ cat diffreqs
-```
-```bash
-#!/bin/bash
-pip freeze | diff requirements.txt -
-```
-```
-❯ rm diffreqs
-rm: remove regular file 'diffreqs'? y
-```
+[diffreqs](file:///home/kvogel/projects/general/dev/learn/python/misc/requirements.md)
 
-
-### requirements.txt with no version
-
-[requirements.txt - Does Python requirements file have to specify version?](https://stackoverflow.com/questions/55052434/does-python-requirements-file-have-to-specify-version)
->you do not need to specify a version. Doing so can avoid headaches though, as specifying a version allows you to guarantee you do not end up in dependency hell.
-
-[User Guide - pip documentation v22.0.4 ](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
-```py
-pkg1
-pkg2
-pkg3>=1.0,<=2.0
-```
-[python - How to create requirement.txt without all package versions](https://stackoverflow.com/questions/59854439/how-to-create-requirement-txt-without-all-package-versions)
-> versions are fixed on purpose. Upgrading versions should be a conscious effort involving testing to confirm compatibility. You want to be running software in a known good state, not in a random unpredictable state.
->`pip` can give you a list of all outdated dependencies easily, and upgrading them is just another command.
-
-[Listing Packages - pip documentation v22.0.4 ](https://pip.pypa.io/en/stable/user_guide/#listing-packages)
->To list outdated packages, and show the latest version available:
-```bash
-python -m pip list --outdated
-```
-
-[pip - How to use requirements.txt to install all dependencies in a python project](https://stackoverflow.com/questions/41457612/how-to-use-requirements-txt-to-install-all-dependencies-in-a-python-project)

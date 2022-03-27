@@ -1,5 +1,8 @@
 
-this: [Developing and Testing an Asynchronous API with FastAPI and Pytest | TestDriven.io ](https://testdriven.io/blog/fastapi-crud/)
+[Developing and Testing an Asynchronous API with FastAPI and Pytest | TestDriven.io ](https://testdriven.io/blog/fastapi-crud/)
+
+By [Michael Herman | TestDriven.io ](https://testdriven.io/authors/herman/)
+>Michael is a software engineer and educator who lives and works in the Denver/Boulder area. He is the co-founder/author of Real Python. Besides development, he enjoys building financial models, tech writing, content marketing, and teaching.
 
 >By the end of this tutorial you should be able to:
 >* Develop an asynchronous RESTful API with Python and FastAPI
@@ -13,15 +16,13 @@ this: [Developing and Testing an Asynchronous API with FastAPI and Pytest | Test
 
 ```
 (venv) 2022-03-03 07:31:57 kvogel@kvogel-surface-ubuntu:~/projects/general/work/uhs/v3 ±(main) ✗
-❯ sudo docker-compose up -d --build
+❯ docker-compose up -d --build
 ```
 
 http://localhost:8002/ping
 ```json
 {"ping":"pong!"}
 ```
-
-
 
 hot reloads even inside container - added route to source (`main.py`) of running container:
 ```py
@@ -42,27 +43,14 @@ To run tests:
 ```
 # docker-compose exec web pytest
 ```
+(shouldn't need [sudo](file:///home/kvogel/projects/general/dev/devops/docker/docker-sudo.md))
 
-```
-2022-03-03 08:34:24 kvogel@kvogel-surface-ubuntu:~/projects/general/work/uhs/v3 ±(main) ✗
-❯ sudo docker-compose exec web pytest
-================================================================================ test session starts =================================================================================
-platform linux -- Python 3.9.4, pytest-6.2.3, py-1.11.0, pluggy-0.13.1
-rootdir: /usr/src/app
-plugins: anyio-3.5.0
-collected 1 item
-
-tests/test_main.py .                                                                                                                                                           [100%]
-
-================================================================================= 1 passed in 0.27s ==================================================================================
-```
 
 >Fixture. A particular environment that must be set up before a test can be run.
 
 ### Async
 
 >As long as you don't have any blocking I/O calls in the handler, you can simply declare the handler as asynchronous by adding the async keyword like so:
-
 
 ### Routes
 
@@ -74,4 +62,6 @@ tests/test_main.py .                                                            
 
 >You can break up and modularize larger projects as well as apply versioning to your API with the *APIRouter*.
 >If you're familiar with Flask, it is *equivalent to a Blueprint*.
+
+### Postgres Setup
 

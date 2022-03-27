@@ -17,9 +17,20 @@ Pattern	Example	Meaning
 
 [The Meaning of Underscores in Python – dbader.org ](https://dbader.org/blog/meaning-of-underscores-in-python)
 
+
+[What’s the Meaning of Single and Double Underscores In Python? | by Ahmed Besbes | Jan, 2022 | Towards Data Science ](https://towardsdatascience.com/whats-the-meaning-of-single-and-double-underscores-in-python-3d27d57d6bd1)
+>1 — Single leading underscores: `_foo` - syntax hint  that these objects are used internally
+>2 — Single trailing underscores: `foo_` - where you want to use a variable name that is actually a reserved keyword in Python such as `class`, def , type , object , etc.
+>3 — Single underscore: `_` To define temporary or unused variables.
+>4 — Double leading and trailing underscores: `__foo__` special universal class methods called dunder methods. reserved methods that you can still overwrite.
+>5 — Double leading underscores: `__bar` - used for name mangling, a process by which the interpreter changes the attribute name to avoid naming collisions in subclasses.  the interpreter prepends the attribute with a single `_` plus the class name. This is done to avoid the value of the `__brand` attribute getting overridden in subclasses.
+
+[Dunder/Magic Methods in Python | Engineering Education (EngEd) Program | Section ](https://www.section.io/engineering-education/dunder-methods-python/)
+
+
 ### leading underscore
 
->The underscore prefix is meant as a *hint* to another programmer that a variable or method starting with a single underscore is intended for internal use. 
+>The underscore prefix is meant as a *hint* to another programmer that a variable or method starting with a single underscore is intended for internal use.
 
 ```py
 >>> class Test:
@@ -33,7 +44,7 @@ Pattern	Example	Meaning
 >>> test._bar
 23
 ```
->leading underscores *do* impact how names get imported from modules. 
+>leading underscores *do* impact how names get imported from modules.
 
 >By the way, wildcard imports should be avoided (see [PEP 8: The Style Guide for Python Code ](https://pep8.org/#imports)) as they make it unclear which names are present in the namespace. It’s better to stick to regular imports for the sake of clarity.
 
@@ -85,12 +96,12 @@ These dunder methods are often referred to as *magic methods* — but many peopl
 
 names that have both leading and trailing double underscores are reserved for special use in the language. This rule covers things like __init__ for object constructors, or __call__ to make an object callable.
 
-name mangling is *not* applied if a name starts and ends with double underscores. 
+name mangling is *not* applied if a name starts and ends with double underscores.
 
 ### 5. Single Underscore: _
 
 a single standalone underscore is sometimes used as a name to indicate that a variable is temporary or insignificant.
-a “don’t care” variable to ignore particular values. 
+a “don’t care” variable to ignore particular values.
 this meaning is “per convention” only and there’s no special behavior triggered in the Python interpreter. The single underscore is simply a valid variable name that’s sometimes used for this purpose.
 
 ```py
