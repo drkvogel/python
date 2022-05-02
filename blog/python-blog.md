@@ -667,3 +667,29 @@ bpython version 0.22.1 on top of Python 3.10.2 /home/kvogel/.asdf/installs/pytho
 
 [diffreqs](file:///home/kvogel/projects/general/dev/learn/python/misc/requirements.md)
 
+### docstring formats
+
+[Comprehensive Guide to Writing Python Functions Others Can Use | by Bex T. | Apr, 2022 | Towards Data Science ](https://towardsdatascience.com/comprehensive-guide-to-writing-python-functions-others-can-use-2fa186c6be71)
+there are 4 main docstring formats: Google-style, Numpydoc, reStructured Text, EpyTex
+Google-style docstring format - most popular?
+Numpydoc Format Docstrings - popular in the data science community.
+
+Accessing the Docstrings of functions Without Googling
+You can also access any function’s docstring by calling `.__doc__` on the function name:
+
+
+```
+2022-04-19 05:45:26 kvogel@kvogel-surface-ubuntu:~
+❯ bp
+bpython version 0.22.1 on top of Python 3.10.2 /home/kvogel/.asdf/installs/python/3.10.2/bin/python3
+>>> print(print.__doc__)
+print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+Prints the values to a stream, or to sys.stdout by default.
+Optional keyword arguments:
+file:  a file-like object (stream); defaults to the current sys.stdout.
+sep:   string inserted between values, default a space.
+end:   string appended after the last value, default a newline.
+flush: whether to forcibly flush the stream.
+```
+
