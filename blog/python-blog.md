@@ -693,3 +693,17 @@ end:   string appended after the last value, default a newline.
 flush: whether to forcibly flush the stream.
 ```
 
+
+[Raymond Hettinger](https://www.google.com/search?qie=UTF-8)
+[The Mental Game of Python - Raymond Hettinger](https://www.youtube.com/watch?v=UANN2Eu6ZnM)
+[rhettinger (Raymond Hettinger) ](https://github.com/rhettinger)
+[About | Deep Thoughts by Raymond Hettinger ](https://rhettinger.wordpress.com/about/)
+[Python's Class Development Toolkit](https://www.youtube.com/watch?v=HTLu2DFOdTg)
+[Transforming Code into Beautiful, Idiomatic Python](https://www.youtube.com/watch?v=OSGv2VnC0go)
+[The Art of Subclassing](https://www.youtube.com/watch?v=miGolgp9xq8)
+[Raymond Hettinger blog](https://www.google.com/search?qsadpr=1.41)
+[The Mental Game of Python, by Raymond Hettinger – paulvanderlaken.com ](https://paulvanderlaken.com/2019/11/20/the-mental-game-of-python-by-raymond-hettinger/)
+[(1) Raymond Hettinger on Twitter: "Groups can also be given names: >>> script = 'There are 4 lights!' >>> mo =https://t.co/wyz8pxPXIU(r'[Tt]here are (?P<count>\d+) lights', script) >>> mo[1] == https://t.co/mviw1UXbwm(1) == mo['count'] == https://t.co/mviw1UXbwm('count') True >>> mo.groupdict() {'count': '4'} /2" / Twitter ](https://twitter.com/raymondh/status/1504266219402280965)
+[Deep Thoughts by Raymond Hettinger | Ruminations on Computers, Programming and Life ](https://rhettinger.wordpress.com/)
+[#PyConEstonia 2020: 'Object Oriented Programming from scratch (four times)' by Raymond Hettinger](https://www.youtube.com/watch?v=8moWQ1561FY)
+
