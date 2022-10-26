@@ -707,3 +707,14 @@ flush: whether to forcibly flush the stream.
 [Deep Thoughts by Raymond Hettinger | Ruminations on Computers, Programming and Life ](https://rhettinger.wordpress.com/)
 [#PyConEstonia 2020: 'Object Oriented Programming from scratch (four times)' by Raymond Hettinger](https://www.youtube.com/watch?v=8moWQ1561FY)
 
+[Python — 10 Common Beginner Mistakes | by Code & Dogs | Python Point | Jul, 2022 | Medium ](https://medium.com/python-point/python-10-common-beginner-mistakes-c786a3ac12b5)
+
+[enumerate() and dict.items() – thwllms ](https://www.thwllms.com/blog/2015/07/12/enumerate/)
+
+[How we optimized Python API server code 100x | by Vadim Markovtsev | Feb, 2022 | Towards Data Science ](https://towardsdatascience.com/how-we-optimized-python-api-server-code-100x-9da94aa883c5)
+[How to Easily Summarize Audio and Video Files in Python | by Frank Andrade | Jan, 2022 | Towards Data Science ](https://towardsdatascience.com/how-to-easily-summarize-audio-and-video-files-in-python-13f42be00bf2)
+[10-Minute Guide to Julia For Die-Hard Python Lovers | Towards Data Science ](https://towardsdatascience.com/10-minute-guide-to-julia-for-die-hard-python-lovers-a2fcf7dcb860)
+[YAML with Python. This article aims to outline the basics… | by Ashish M J | Feb, 2022 | Dev Genius ](https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab)
+[Improve Your Code with Decorators | Python in Plain English ](https://python.plainenglish.io/improve-your-code-with-decorators-4fec033b99eb?source=read_next_recirc---------2-------------------------------)
+[3 Python Packages that Make you Code Faster | by Jake from Mito | trymito | Feb, 2022 | Medium ](https://medium.com/trymito/3-python-packages-that-make-you-code-faster-eff1aea19f5d?source=read_next_recirc---------3-------------------------------)
+
