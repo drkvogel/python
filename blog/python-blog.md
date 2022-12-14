@@ -718,3 +718,127 @@ flush: whether to forcibly flush the stream.
 [Improve Your Code with Decorators | Python in Plain English ](https://python.plainenglish.io/improve-your-code-with-decorators-4fec033b99eb?source=read_next_recirc---------2-------------------------------)
 [3 Python Packages that Make you Code Faster | by Jake from Mito | trymito | Feb, 2022 | Medium ](https://medium.com/trymito/3-python-packages-that-make-you-code-faster-eff1aea19f5d?source=read_next_recirc---------3-------------------------------)
 
+
+[No, Julia is not 34,000,000,000 times faster than Python  by Logan Kilpatrick  Nov, 2022  JuliaZoid ](https://medium.juliazoid.com/no-julia-is-not-34-000-000-000-times-faster-than-python-f63e956313d7)
+
+
+```
+22/11/29 0:03:37 kvogel@kvogel-macbook-2021:~
+❯ bp
+bpython version 0.23 on top of Python 3.11.0 /Users/kvogel/.asdf/installs/python/3.11.0/bin/python3.11
+```
+```py
+>>> import time
+>>> def count():
+...     start = time.perf_counter()
+...     n = 0
+...     while n < 1_000_000_000:
+...         n += 1
+...     print(f"Completed execution in {time.perf_counter() - start} seconds")
+...
+...
+>>> count()
+Completed execution in 25.94503899999836 seconds
+>>> count()
+Completed execution in 25.17136558299535 seconds
+```
+Consistently about 25s on M1 Mac
+
+```
+22/11/29 0:35:12 kvogel@kvogel-macbook-2021:~
+❯ julia
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.8.3 (2022-11-14)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+```
+```julia
+julia> function count()
+         n = 0
+         while n < 1_000_000_000
+           n += 1
+         end
+       end
+count (generic function with 1 method)
+
+julia> using BenchmarkTools
+ │ Attempted to find missing packages in package registries but no registries are installed.
+ └ Use package mode to install a registry. `pkg> registry add` will install the default registries.
+
+ERROR: ArgumentError: Package BenchmarkTools not found in current path.
+- Run `import Pkg; Pkg.add("BenchmarkTools")` to install the BenchmarkTools package.
+Stacktrace:
+ [1] macro expansion
+   @ ./loading.jl:1163 [inlined]
+ [2] macro expansion
+   @ ./lock.jl:223 [inlined]
+ [3] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:1144
+```
+
+[Julia’s Package Manager Is AWESOME  by Emmett Boudreau  Towards Data Science ](https://towardsdatascience.com/julias-package-manager-is-awesome-23b9c02e3a0b)
+
+Press `]` for `pkg`, Julia's package manager REPL:
+```
+(@v1.8) pkg> add BenchmarkTools
+  Installing known registries into `~/.julia`
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+   Installed BenchmarkTools ── v1.3.2
+   Installed Parsers ───────── v2.5.1
+   Installed SnoopPrecompile ─ v1.0.1
+   Installed JSON ──────────── v0.21.3
+    Updating `~/.julia/environments/v1.8/Project.toml`
+  [6e4b80f9] + BenchmarkTools v1.3.2
+    Updating `~/.julia/environments/v1.8/Manifest.toml`
+  [6e4b80f9] + BenchmarkTools v1.3.2
+...
+Precompiling project...
+  7 dependencies successfully precompiled in 9 seconds
+
+(@v1.8) pkg>
+```
+
+```julia
+julia> function count()
+         n = 0
+         while n < 1_000_000_000
+           n += 1
+         end
+       end
+count (generic function with 1 method)
+
+julia> using BenchmarkTools
+julia> @benchmark count()
+BenchmarkTools.Trial: 10000 samples with 1000 evaluations.
+ Range (min … max):  1.208 ns … 541.958 ns  ┊ GC (min … max): 0.00% … 0.00%
+ Time  (median):     1.292 ns               ┊ GC (median):    0.00%
+ Time  (mean ± σ):   1.386 ns ±   5.560 ns  ┊ GC (mean ± σ):  0.00% ± 0.00%
+
+           ▂         ▆         █
+  ▂▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▆▁▁▁▁▁▁▁▁▁▃▁▁▁▁▁▁▁▁▂ ▂
+  1.21 ns         Histogram: frequency by time        1.46 ns <
+
+ Memory estimate: 0 bytes, allocs estimate: 0.
+```
+
+### Django CTE Trees
+
+[Django CTE Trees — Django CTE Trees 1.0.0b2 documentation ](https://django-cte-trees.readthedocs.io/en/latest/)
+[django-cte-trees · PyPI ](https://pypi.org/project/django-cte-trees/)
+[petrounias/django-cte-trees: Django Adjacency-List trees using PostgreSQL Common Table Expressions (CTE) ](https://github.com/petrounias/django-cte-trees)
+
+"Pharaoh, Grandmother, and Monarchy deletion patterns":
+My SO q: [django - What are Pharaoh, Grandmother, and Monarchy deletion patterns?](https://stackoverflow.com/questions/74738447/what-are-pharaoh-grandmother-and-monarchy-deletion-patterns?noredirect=1#comment131906646_74738447)
+[django-cte-trees/models.py at 90036a35eb025514539b7c7e996ac9e8e92cd9b8 · petrounias/django-cte-trees ](https://github.com/petrounias/django-cte-trees/blob/90036a35eb025514539b7c7e996ac9e8e92cd9b8/cte_tree/models.py#L113)
+My gh issue: [Docs: explanation of "Pharaoh, Grandmother, and Monarchy deletion patterns" · Issue #12 · petrounias/django-cte-trees ](https://github.com/petrounias/django-cte-trees/issues/12)
+```
+~/projects
+➜ git clone git@github.com:petrounias/django-cte-trees.git
+django-cte-trees on  master via 🐍 v3.11.0
+➜ code .
+```
