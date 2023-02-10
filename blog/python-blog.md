@@ -842,3 +842,45 @@ My gh issue: [Docs: explanation of "Pharaoh, Grandmother, and Monarchy deletion 
 django-cte-trees on  master via 🐍 v3.11.0
 ➜ code .
 ```
+
+[python - DEPRECATION Error : 'wheel' package is not installed](https://stackoverflow.com/questions/74436681/deprecation-error-wheel-package-is-not-installed)
+[Deprecate call to 'setup.py install' when 'wheel' is absent for source distributions without pyproject.toml · Issue #8559 · pypa/pip ](https://github.com/pypa/pip/issues/8559)
+
+
+### pip upgrade
+
+```
+23/02/4 16:20:42 kvogel@kvogel-macbook-2021:~
+❯ pip -V
+pip 22.3 from /Users/kvogel/.asdf/installs/python/3.11.0/lib/python3.11/site-packages/pip (python 3.11)
+[notice] A new release of pip available: 22.3 -> 23.0
+[notice] To update, run: pip3 install --upgrade pip
+❯ pip3 install --upgrade pip
+Successfully installed pip-23.0
+```
+
+### pip index
+
+e.g. `pip index versions <package-name>`:
+
+```
+23/02/4 18:15:35 kvogel@kvogel-macbook-2021:~
+❯ pip index versions openai
+WARNING: pip index is currently an experimental command. It may be removed/changed in a future release without prior warning.
+openai (0.26.4)
+Available versions: 0.26.4, 0.26.3, 0.26.2, 0.26.1, 0.26.0, 0.25.0, 0.24.0, 0.23.1, 0.23.0, 0.22.1, 0.22.0, 0.20.0, 0.19.0, 0.18.1, 0.18.0, 0.16.0, 0.15.0, 0.14.0, 0.13.0, 0.12.0, 0.11.6, 0.11.5, 0.11.4, 0.11.3, 0.11.2, 0.11.1, 0.11.0, 0.10.5, 0.10.4, 0.10.3, 0.10.2, 0.10.1, 0.10.0, 0.9.4, 0.9.3, 0.9.2, 0.9.1, 0.9.0, 0.8.0, 0.7.0, 0.6.4, 0.6.3, 0.6.2, 0.6.1, 0.6.0, 0.4.0, 0.3.0, 0.2.6, 0.2.5, 0.2.4, 0.2.3, 0.2.1, 0.2.0, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.0.2
+  INSTALLED: 0.26.4
+  LATEST:    0.26.4
+```
+
+
+[Python’s “Disappointing” Superpowers - lukeplant.me.uk ](https://lukeplant.me.uk/blog/posts/pythons-disappointing-superpowers/)
+[mypy/pyright](https://www.google.com/search?q=mypy%2Fpyright&ie=UTF-8)
+[I've used mypy and pyright. Mypy generally "just works" for all the Python idiom...  Hacker News ](https://news.ycombinator.com/item?id=27108601)
+[Pyright, yet another alternative to mypy. This time by Microsoft : Python ](https://www.reddit.com/r/Python/comments/b5nvvp/pyright_yet_another_alternative_to_mypy_this_time/)
+[Mypy vs pyright vs pytype vs pyre. What are the benefits of each? : learnpython ](https://www.reddit.com/r/learnpython/comments/z1r5ll/mypy_vs_pyright_vs_pytype_vs_pyre_what_are_the/)
+[Static Typing with Python — typing documentation ](https://typing.readthedocs.io/en/latest/)
+[I am disappointed by dynamic typing • Buttondown ](https://buttondown.email/hillelwayne/archive/i-am-disappointed-by-dynamic-typing/)
+[Smug Non Lisp Weenie ](https://wiki.c2.com/?SmugNonLispWeenie)
+[Smug Weenie](https://www.google.com/search?q=Smug+Weenie&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIJCAAQBxAeEPEEMgUIABCGAzIFCAAQhgMyBQgAEIYDOgoIABBHENYEELADSgQIQRgASgQIRhgAUK0EWK0EYPURaAJwAXgAgAF2iAF2kgEDMC4xmAEAoAEByAEDwAEB&sclient=gws-wiz-serp)
+[PEP 484 – Type Hints  peps.python.org ](https://peps.python.org/pep-0484/)
