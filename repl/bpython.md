@@ -3,6 +3,7 @@
 
 
 
+
 ### Running bpython inside a virtualenv
 
 [python - Running bpython inside a virtualenv](https://stackoverflow.com/questions/25434576/running-bpython-inside-a-virtualenv)
@@ -57,3 +58,49 @@ You should consider upgrading via the '/home/kvogel/.asdf/installs/python/3.10.2
 ```
 >bpython-curtsies is bpython with native terminal scrolling
 ?
+
+### bpython slow
+
+bpython is now hella slow....
+installed IPython
+
+```
+23/03/14 13:01:47 kvogel@kvogel-macbook-2021:~
+❯ bp
+bpython version 0.23 on top of Python 3.11.0 /Users/kvogel/.asdf/installs/python/3.11.0/bin/python3.11
+>>> import pprint
+>>> nums -
+KeyboardInterrupt
+>>> nums = {4:1, 3:2, 1:1, 2:3}
+>>> pprint.pprint(nums, sort_dicts=True)
+{1: 1, 2: 3, 3: 2, 4: 1}
+>>>
+
+23/03/14 13:03:50 kvogel@kvogel-macbook-2021:~
+❯ ipython
+Python 3.11.0 (main, Nov 14 2022, 13:44:00) [Clang 14.0.0 (clang-1400.0.29.202)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.11.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import pprint
+
+In [2]: nums = {4:1, 3:2, 1:1, 2:3}
+
+In [3]: pprint.pprint(nums, sort_dicts=True)
+{1: 1, 2: 3, 3: 2, 4: 1}
+
+In [4]:
+```
+ptpython even better?
+```
+23/03/14 13:46:46 kvogel@kvogel-macbook-2021:~
+❯ pip install ptpython
+...
+Reshimming asdf python...
+❯ ptpython
+>>> import pprint
+>>> nums = {4:1, 3:2, 1:1, 2:3}
+>>> pprint.pprint(nums, sort_dicts=True)
+{1: 1, 2: 3, 3: 2, 4: 1}
+>>>
+```

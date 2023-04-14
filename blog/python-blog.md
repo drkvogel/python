@@ -884,3 +884,59 @@ Available versions: 0.26.4, 0.26.3, 0.26.2, 0.26.1, 0.26.0, 0.25.0, 0.24.0, 0.23
 [Smug Non Lisp Weenie ](https://wiki.c2.com/?SmugNonLispWeenie)
 [Smug Weenie](https://www.google.com/search?q=Smug+Weenie&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIJCAAQBxAeEPEEMgUIABCGAzIFCAAQhgMyBQgAEIYDOgoIABBHENYEELADSgQIQRgASgQIRhgAUK0EWK0EYPURaAJwAXgAgAF2iAF2kgEDMC4xmAEAoAEByAEDwAEB&sclient=gws-wiz-serp)
 [PEP 484 – Type Hints  peps.python.org ](https://peps.python.org/pep-0484/)
+
+
+seen on LinkedIn:
+```
+23/03/6 9:55:09 kvogel@kvogel-macbook-2021:~
+❯ bpython
+bpython version 0.23 on top of Python 3.11.0 /Users/kvogel/.asdf/installs/python/3.11.0/bin/python3.11
+```
+```py
+>>> n=4
+>>> def f1():
+...     n=n**4
+...     print(n)
+...
+... f1()
+  File "<input>", line 5
+    f1()
+    ^^
+SyntaxError: invalid syntax
+```
+```
+23/03/6 9:56:12 kvogel@kvogel-macbook-2021:~
+❯ python
+Python 3.11.0 (main, Nov 14 2022, 13:44:00) [Clang 14.0.0 (clang-1400.0.29.202)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+```
+```py
+>>> n=4
+>>> def f1():
+...   n=n**4
+...   print(n)
+... f1()
+  File "<stdin>", line 4
+    f1()
+    ^^
+SyntaxError: invalid syntax
+>>> f1()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'f1' is not defined
+>>> def f1():
+...   n=n**4
+...   print(n)
+...
+>>> f1()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f1
+UnboundLocalError: cannot access local variable 'n' where it is not associated with a value
+>>> def f1():
+...   global n
+...   n=n**4
+...   print(n)
+...
+>>> f1()
+```
